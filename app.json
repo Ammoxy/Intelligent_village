@@ -1,13 +1,31 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/home/home",
+    "pages/personal/index/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2a9f93",
+    "navigationBarTitleText": "智能乡村",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#2a9f93",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/icon/index1.png",
+        "selectedIconPath": "/icon/index.png"
+      },
+      {
+        "pagePath": "pages/personal/index/index",
+        "text": "我的",
+        "iconPath": "/icon/my1.png",
+        "selectedIconPath": "/icon/my.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
