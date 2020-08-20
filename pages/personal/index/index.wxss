@@ -29,6 +29,21 @@
     align-items: center;
 }
 
+.user_log {
+    display: flex;
+    height: 100%;
+    /* flex-direction: column; */
+    align-items: center;
+}
+.user_nickname {
+    color: #fff;
+    margin-bottom: 10rpx
+}
+
+.user_img {
+    width: 30%;
+}
+
 .nickname {
     color: #fff;
 }

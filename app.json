@@ -1,7 +1,12 @@
 {
   "pages": [
+    "pages/personal/index/index",
+
     "pages/home/home",
-    "pages/personal/index/index"
+    "pages/personal/dubious-face/dubious-face/dubious-face",
+    "pages/personal/IT-MJ/IT-MJ/IT-MJ",
+    "pages/personal/snap/snap/snap",
+    "pages/personal/information/information/information"
   ],
   "window": {
     "backgroundTextStyle": "light",
