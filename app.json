@@ -1,22 +1,22 @@
 {
   "pages": [
     "pages/personal/index/index",
-
     "pages/home/home",
     "pages/personal/dubious-face/dubious-face/dubious-face",
     "pages/personal/IT-MJ/IT-MJ/IT-MJ",
     "pages/personal/snap/snap/snap",
-    "pages/personal/information/information/information"
+    "pages/personal/information/information/information",
+    "pages/personal/dubious-face/face-detail/face-detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#2a9f93",
+    "navigationBarBackgroundColor": "#378dbb",
     "navigationBarTitleText": "智能乡村",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#000",
-    "selectedColor": "#2a9f93",
+    "selectedColor": "#378dbb",
     "list": [
       {
         "pagePath": "pages/home/home",
@@ -32,6 +32,5 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

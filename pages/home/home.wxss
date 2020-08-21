@@ -23,7 +23,7 @@ page {
 /* 标题 */
 .titleText {
   font-size: 32rpx;
-  border-left: 5rpx solid #2a9f93;
+  border-left: 5rpx solid #378dbb;
   height: 60rpx;
   line-height: 60rpx;
   background-color: #fff;
@@ -81,7 +81,7 @@ page {
 
 .choose-banner .area {
   font-size: 26rpx;
-  color: #2a9f93;
+  color: #378dbb;
 }
 
 .choose-banner .input {
@@ -89,7 +89,7 @@ page {
   height: 44rpx;
   line-height: 44rpx;
   font-size: 26rpx;
-  border: 1rpx solid #2a9f93;
+  border: 1rpx solid #378dbb;
   border-radius: 30rpx;
   padding: 10rpx 20rpx;
   margin: 0 30rpx;
@@ -103,7 +103,7 @@ page {
   font-size: 26rpx;
   padding: 10rpx;
   border-radius: 10rpx;
-  background-color: #2a9f93;
+  background-color: #378dbb;
   color: #fff;
 }
 

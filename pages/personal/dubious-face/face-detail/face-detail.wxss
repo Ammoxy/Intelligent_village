@@ -1,0 +1,110 @@
+/* pages/personal/dubious-face/face-detail/face-detail.wxss */
+page {
+  /* height: 100%; */
+  width: 100%;
+}
+
+.auto_img {
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.box .header {
+  /* width: 100%; */
+  height: 200rpx;
+  display: flex;
+  background-color: #378dbb;
+  color: #fff;
+  margin: 10rpx 10rpx 0 10rpx;
+  /* background-color: burlywood; */
+}
+
+.box .header .header_img {
+  width: 35%;
+  /* background-color: cadetblue; */
+}
+
+.box .header .heaser_content {
+  width: 65%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  /* background-color: chartreuse; */
+}
+.box .header .heaser_content .info view {
+  height: 60rpx;
+}
+
+.box .content .c_header {
+  /* position: fixed; */
+  width: 100%;
+  /* background-color: #f0f0f0; */
+  border-bottom: 2rpx solid #ddd;
+  border-top: 2rpx solid #ddd;
+  display: flex;
+  /* z-index: 100; */
+  /* padding: 20rpx 0; */
+  /* text-align: center; */
+  height: 80rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box .content .c_header .header_img {
+  /* width: calc(100% / 3); */
+  /* border-right: 2rpx solid rgb(71, 59, 59); */
+  width: 45%;
+}
+
+.box .content .c_header .header_box {
+  /* width: calc(100% / 3); */
+  /* border-right: 2rpx solid rgb(71, 59, 59); */
+  width: 40%;
+}
+
+.box .content .c_header .header_btn {
+  /* width: calc(100% / 3); */
+  /* border-right: 2rpx solid rgb(71, 59, 59); */
+  width: 15%;
+}
+
+.box .content .c_content {
+  display: flex;
+  border-bottom: 2rpx solid #ddd;
+  height: 100rpx;
+  align-items: center;
+}
+
+.box .content .c_content:nth-child(2n) {
+  background-color: #fff;
+}
+
+.box .content .c_content:nth-child(2n + 1) {
+  background-color: #f0f5f8;
+}
+
+.box .content .c_content .address {
+  /* width: calc(100% / 3); */
+  /* border-right: 2rpx solid rgb(71, 59, 59); */
+  width: 45%;
+}
+
+.box .content .c_content .time {
+  /* width: calc(100% / 3); */
+  /* border-right: 2rpx solid rgb(71, 59, 59); */
+  width: 40%;
+}
+
+.box .content .c_content .face_img {
+  /* width: calc(100% / 3); */
+  /* border-right: 2rpx solid rgb(71, 59, 59); */
+  width: 15%;
+}
+
+.box .content .c_content .face_img .auto_img {
+  width: 100rpx;
+height: 100rpx;
+
+  display: block;
+}

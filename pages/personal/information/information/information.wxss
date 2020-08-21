@@ -70,9 +70,9 @@ radio .wx-radio-input.wx-radio-input-checked::before {
   line-height: 75rpx;
   text-align: center;
   margin: -0 0 0 0;
-  background-color: #2a9f93;
+  background-color: #378dbb;
   border-radius: 50%;
-  border: 1rpx solid #2a9f93;
+  border: 1rpx solid #378dbb;
 }
 
 .form-item .box2 {
@@ -89,7 +89,7 @@ radio .wx-radio-input.wx-radio-input-checked::before {
 }
 
 .wx-switch-input {
-  background: #2a9f93 !important;
+  background: #378dbb !important;
 }
 
 .textarea {
@@ -101,12 +101,12 @@ radio .wx-radio-input.wx-radio-input-checked::before {
 .btn .submit { 
   width: 450rpx;
   height: 80rpx;
-  line-height: 50rpx;
+  line-height: 80rpx;
   margin: 50rpx auto 50rpx auto;
   border-radius: 50rpx;
   font-size: 28rpx;
   color: #fff;
-  background: #2a9f93;
+  background: #378dbb;
   font-weight: normal;
 }
 
@@ -123,7 +123,7 @@ radio .wx-radio-input.wx-radio-input-checked::before {
   border-radius: 50rpx;
   font-size: 28rpx;
   color: #fff;
-  background: #2a9f93;
+  background: #378dbb;
 }
 
 /* 人脸图像 */
