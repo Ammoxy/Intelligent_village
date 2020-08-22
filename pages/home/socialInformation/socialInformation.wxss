@@ -36,8 +36,8 @@ page {
 }
 
 .classification .nav_active {
-  color:#2a9f93;
-  border-bottom:5rpx solid #2a9f93;
+  color:#378dbb;
+  border-bottom:5rpx solid #378dbb;
 }
 
 .box {
