@@ -1,0 +1,99 @@
+/* pages/home/socialInformation/socialInformation.wxss */
+page {
+  background-color: #eee;
+  height: 100%;
+  width: 100%;
+}
+
+.v_box {
+  width: 100%;
+  height: 100%;
+}
+
+.classification {
+  position: fixed;
+  left: 0rpx;
+  top:0;
+  z-index: 100000;
+  background-color:#fff;
+  height:100rpx;
+  width:100%;
+  margin-bottom:10rpx;
+  font-size: 30rpx;
+  overflow-x: auto;
+
+  display: flex;
+  justify-content:flex-start;
+  align-items: stretch;
+}
+
+.classification view{
+  position: relative;/* formID按钮父元素 */
+  line-height:100rpx;
+  text-align: center;
+  width:calc(100% / 3);
+  min-width: 187.5rpx;
+}
+
+.classification .nav_active {
+  color:#2a9f93;
+  border-bottom:5rpx solid #2a9f93;
+}
+
+.box {
+  display: flex;
+  padding-top: 100rpx;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.box .content_box {
+  /* margin: 0 10rpx 10rpx; */
+  margin-bottom: 10rpx;
+  width: 49%;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.box .content_box:nth-child(2n) {
+  margin-left: 10rpx;
+
+}
+
+.box .content_box .title {
+  font-size: 24rpx;
+  margin: 0 20rpx 20rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.box .content_box image {
+  width: 315rpx;
+  height: 220rpx;
+  margin: 20rpx 20rpx;
+}
+
+.box .cnt_box .auto_img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 300rpx;
+  margin: auto;
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+  overflow: hidden;
+}
+
+.box .cnt_box .title {
+  position: absolute;
+  top: 450rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 26rpx;
+  padding: 20rpx;
+  color: #999;
+}

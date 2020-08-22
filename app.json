@@ -6,7 +6,9 @@
     "pages/personal/IT-MJ/IT-MJ/IT-MJ",
     "pages/personal/snap/snap/snap",
     "pages/personal/information/information/information",
-    "pages/personal/dubious-face/face-detail/face-detail"
+    "pages/personal/dubious-face/face-detail/face-detail",
+    "pages/home/socialInformation/socialInformation",
+    "pages/home/socialInformation/details/details"
   ],
   "window": {
     "backgroundTextStyle": "light",
