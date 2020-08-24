@@ -40,8 +40,21 @@
 				<text>门禁机</text>
 			</view>
 			<view bindtap="toSnap">
-				<image src="/icon/Capture.png" />
+				<image src="/icon/capture.png" />
 				<text>抓拍枪</text>
+			</view>
+		</view>
+	</view>
+	<view class="plate">
+		<view class="title">地址信息</view>
+		<view class="list">
+			<view bindtap="toLet">
+				<image src="/icon/unit.png" />
+				<text>出租屋</text>
+			</view>
+			<view bindtap="toSchool">
+				<image src="/icon/school.png" />
+				<text>学校</text>
 			</view>
 		</view>
 	</view>

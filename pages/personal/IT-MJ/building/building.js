@@ -1,4 +1,4 @@
-// pages/personal/IT-MJ/IT-MJ/IT-MJ.js
+// pages/personal/IT-MJ/building/building.js
 Page({
 
   /**
@@ -22,10 +22,10 @@ Page({
 
   },
 
-  toBuilding() {
+  toRenter() {
     var self = this;
     wx.navigateTo({
-      url: '../building/building',
+      url: '../renters/renters',
     })
   },
 

@@ -1,4 +1,4 @@
-// pages/personal/IT-MJ/IT-MJ/IT-MJ.js
+// pages/personal/lets/lets.js
 Page({
 
   /**
@@ -20,13 +20,6 @@ Page({
    */
   onReady: function () {
 
-  },
-
-  toBuilding() {
-    var self = this;
-    wx.navigateTo({
-      url: '../building/building',
-    })
   },
 
   /**

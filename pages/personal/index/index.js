@@ -83,7 +83,7 @@ Page({
       })
     // }
   },
-  // 去房屋管理
+  // 去可疑人脸
   toDubious() {
     var self = this
     // if (!wx.getStorageSync('token')) {
@@ -105,7 +105,7 @@ Page({
     })
   },
 
-  // 绑定家庭成员
+  // 去门禁机
   toIT_MJ() {
     var self = this;
     // if (!wx.getStorageSync('token')) {
@@ -126,7 +126,7 @@ Page({
       url: '../IT-MJ/IT-MJ/IT-MJ'
     })
   },
-  // 一键开门
+  // 去抓拍抢
   toSnap() {
     var self = this;
     // if (!wx.getStorageSync('token')) {
@@ -140,6 +140,24 @@ Page({
     // }
     wx.navigateTo({
       url: '../snap/snap/snap'
+    })
+  },
+
+  // 去出租屋
+  toLet() {
+    var self = this;
+
+    wx.navigateTo({
+      url: '../lets/lets'
+    })
+  },
+
+  // 去学校
+  toSchool() {
+    var self = this;
+
+    wx.navigateTo({
+      url: '../school/school'
     })
   },
 

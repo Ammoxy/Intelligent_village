@@ -29,6 +29,13 @@ Page({
     
   },
 
+  // 监听页面滚动
+  scroll() {
+    var self = this;
+    console.log(111);
+    
+  },
+
   toDoubtDetails() {
     var self = this;
     wx.navigateTo({
@@ -61,7 +68,14 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    console.log(222);
+    wx.showLoading({
+      title: '加载中',
+    })
+    
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000)
   },
 
   /**

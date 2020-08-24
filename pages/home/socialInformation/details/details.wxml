@@ -1,20 +1,20 @@
 <import src="../../../../wxParse/wxParse.wxml" />
 <!-- <wxs src="../../../../utils/date.wxs" module="tools" /> -->
 <view class="details">
-<!-- 详情  -->
-  <text class="title">{{details.title}}</text>
-  <view class="info">
-    <!-- <text class="date">{{tools.anyuFormat(details.created_at, 'yyyy-MM-dd')}}</text> -->
-    <text class="date">{{details.created_at}}</text>
-  </view>
-  <!-- 内容 -->
-  <view class="content_text">
-  <template is="wxParse" data="{{wxParseData:article.nodes}}" class="content" />
-  </view>
-  <!-- 浏览量和点赞数 -->
-   <view class="box">
-     <view>
-      <image class="icon" src="/icon/browse.png"></image><text class='liulancount'>{{details.page_view}}</text>
-    </view> 
-  </view> 
+	<!-- 详情  -->
+	<text class="title">{{details.title}}</text>
+	<view class="info">
+		<!-- <text class="date">{{tools.anyuFormat(details.created_at, 'yyyy-MM-dd')}}</text> -->
+		<text class="date">{{details.created_at}}</text>
+	</view>
+	<!-- 内容 -->
+	<view class="content_text">
+		<template is="wxParse" data="{{wxParseData:article.nodes}}" class="content" />
+	</view>
+	<!-- 浏览量和点赞数 -->
+	<view class="box">
+		<view>
+			<image class="icon" src="/icon/browse.png"></image><text class='liulancount'>{{details.page_view}}</text>
+		</view>
+	</view>
 </view>

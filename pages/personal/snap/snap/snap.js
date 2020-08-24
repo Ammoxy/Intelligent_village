@@ -29,6 +29,13 @@ Page({
 
   },
 
+  toRecord() {
+    var self = this;
+    wx.navigateTo({
+      url: '../record/record',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

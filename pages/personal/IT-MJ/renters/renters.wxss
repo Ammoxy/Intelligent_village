@@ -17,16 +17,17 @@ page {
 }
 
 .box .search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: 75rpx;
   display: flex;
   background-color: #f0f5f8;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+  z-index: 10;
 }
 .box .search input {
   width: 90%;
@@ -54,9 +55,11 @@ page {
   top: 75rpx;
   left: 0;
   right: 0;
-  width: 100%;
   background-color: #fff;
+  z-index: 10;
+  width: 100%;
   border-bottom: 2rpx solid #ddd;
+
   display: flex;
   z-index: 100;
   /* padding: 20rpx 0; */
@@ -64,20 +67,19 @@ page {
   height: 65rpx;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
 }
 
 .box .header .address {
   /* width: calc(100% / 3); */
   /* border-right: 2rpx solid rgb(71, 59, 59); */
   
-  width: 40%;
+  width: 30%;
 }
 
 .box .header .homes {
   /* width: calc(100% / 3); */
   /* border-right: 2rpx solid rgb(71, 59, 59); */
-  width: 15%;
+  width: 30%;
 }
 
 .box .header .header_btn {
@@ -123,8 +125,10 @@ page {
   /* display: flex; */
   align-items: center;
   /* width: calc(100% / 3); */
-  width: 40%;
+  width: 30%;
   height: 100%;
+  margin: 0 10rpx;
+
   /* background-color: blue; */
 }
 
@@ -132,7 +136,7 @@ page {
   /* display: flex; */
   align-items: center;
   /* width: calc(100% / 3); */
-  width: 15%;
+  width: 30%;
   height: 100%;
   /* background-color: blue; */
 }
@@ -152,8 +156,6 @@ page {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  margin: 0 10rpx;
-
 }
 
 .box .list .info-list .guardian {
@@ -176,7 +178,7 @@ page {
 
 .list .info-list .list_btn .btn {
   /* width: 100rpx; */
-  width: 156rpx;
+  width: 162rpx;
   height: 60rpx;
   line-height: 60rpx;
   text-align: center;
@@ -184,7 +186,7 @@ page {
   color: #fff;
   background-color: #378dbb;
   border-radius: 10rpx;
-  font-size: 30rpx;
+  font-size: 24rpx;
 }
 
 .mini-btn {

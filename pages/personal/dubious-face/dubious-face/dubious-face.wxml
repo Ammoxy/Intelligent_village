@@ -1,6 +1,7 @@
 <!--pages/personal/dubious-face/dubious-face/dubious-face.wxml-->
-<view class="box">
-	<!-- <view wx:for="{{renterList}}" wx:key="{{index}}" class="list">
+
+	<view class="box">
+		<!-- <view wx:for="{{renterList}}" wx:key="{{index}}" class="list">
 		<view class="info-list">
 			<view data-name="{{item.snapshot.name}}" data-sex="{{item.snapshot.sex}}" data-card_number="{{item.snapshot.card_number}}" data-href="{{item.snapshot.href}}" data-address="{{item.address.address}}" data-phone="{{item.snapshot.phone}}" bindtap="renterDetail">
 				<image src="/icon/children.png"></image>
@@ -13,34 +14,22 @@
 		</view>
 		<button>详情</button>
 	</view> -->
-	<view class="header">
-		<text class="header_img">图片</text>
-		<text class="header_box">进出状态</text>
-		<text class="header_btn">操作</text>
-	</view>
-	<view class="top"></view>
-	<view class="list">
-		<view class="info-list">
-			<view class="list_img">
-				<image src="/icon/unit.png"></image>
-			</view>
-			<view class="list_box">111</view>
-			<view class="list_btn">
-				<button class="btn" type="primary" size="mini" bindtap="toDoubtDetails">详情</button>
-				<button class="mini-btn" type="warn" size="mini" bindtap="delete">删除</button>
-			</view>
+		<view class="header">
+			<text class="header_img">图片</text>
+			<text class="header_box">进出状态</text>
+			<text class="header_btn">操作</text>
 		</view>
-	</view>
+		<view class="top"></view>
 		<view class="list">
-		<view class="info-list">
-			<view class="list_img">
-				<image src="/icon/unit.png"></image>
-			</view>
-			<view class="list_box">111</view>
-			<view class="list_btn">
-				<button class="btn" type="primary" size="mini" bindtap="toDoubtDetails">详情</button>
-				<button class="mini-btn" type="warn" size="mini" bindtap="delete">删除</button>
+			<view class="info-list">
+				<view class="list_img">
+					<image src="https://tu.fengniaotuangou.cn/tmp_ff1b709c323f134045df80bea705bde2bfd57d1d90686b6f.jpg"></image>
+				</view>
+				<view class="list_box">111</view>
+				<view class="list_btn">
+					<button class="btn" type="primary" size="mini" bindtap="toDoubtDetails">详情</button>
+					<!-- <button class="mini-btn" type="warn" size="mini" bindtap="delete">删除</button> -->
+				</view>
 			</view>
 		</view>
 	</view>
-</view>

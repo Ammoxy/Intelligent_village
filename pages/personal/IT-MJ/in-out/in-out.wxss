@@ -1,9 +1,7 @@
 /* pages/personal/dubious-face/face-detail/face-detail.wxss */
 page {
-  /* height: 100%; */
   width: 100%;
   font-size: 28rpx;
-
 }
 
 .auto_img {
@@ -13,20 +11,16 @@ page {
   margin-left: 25rpx;
 }
 
-.box {
-  position: relative;
-}
-
 .box .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 200rpx;
+  z-index: 10;
   display: flex;
   background-color: #378dbb;
   color: #fff;
-  z-index: 10;
 }
 
 .box .header .header_img {
@@ -42,31 +36,27 @@ page {
 .box .header .heaser_content .info view {
   height: 60rpx;
 }
-.box .content  {
+
+.box .content {
   position: relative;
   top: 200rpx;
-  left: 0;
-  right: 0;
 }
+
 .box .content .c_header {
   position: fixed;
   top: 200rpx;
   left: 0;
   right: 0;
   width: 100%;
+  background-color: #fff;
+  z-index: 10;
   border-bottom: 2rpx solid #ddd;
   border-top: 2rpx solid #ddd;
   display: flex;
   height: 80rpx;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
-  background-color: #fff;
 }
-
-
-
-
 
 .box .content .c_header .header_img {
   width: 45%;
@@ -80,22 +70,23 @@ page {
   width: 15%;
 }
 
+.box .content .top{
+  width: 100%;
+  height: 80rpx;
+}
+
 .box .content .c_content {
-  position: relative;
-  top: 80rpx;
-  left: 0;
-  right: 0;
   display: flex;
   border-bottom: 2rpx solid #ddd;
   height: 100rpx;
   align-items: center;
 }
 
-.box .content .c_content:nth-child(2n + 1) {
+.box .content .c_content:nth-child(2n) {
   background-color: #fff;
 }
 
-.box .content .c_content:nth-child(2n) {
+.box .content .c_content:nth-child(2n + 1) {
   background-color: #f0f5f8;
 }
 
@@ -105,6 +96,8 @@ page {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  margin: 0 10rpx;
+
 }
 
 .box .content .c_content .time {

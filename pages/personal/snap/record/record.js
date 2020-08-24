@@ -1,4 +1,4 @@
-// pages/personal/IT-MJ/IT-MJ/IT-MJ.js
+// pages/personal/snap/record/record.js
 Page({
 
   /**
@@ -22,18 +22,18 @@ Page({
 
   },
 
-  toBuilding() {
-    var self = this;
-    wx.navigateTo({
-      url: '../building/building',
-    })
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
 
+  },
+
+  toListImg() {
+    wx.previewImage({
+      current: 'https://tu.fengniaotuangou.cn/tmp_ff1b709c323f134045df80bea705bde2bfd57d1d90686b6f.jpg', // 当前显示图片的http链接
+      urls: ['https://tu.fengniaotuangou.cn/tmp_ff1b709c323f134045df80bea705bde2bfd57d1d90686b6f.jpg'] // 需要预览的图片http链接列表
+    })
   },
 
   /**

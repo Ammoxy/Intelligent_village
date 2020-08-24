@@ -8,7 +8,13 @@
     "pages/personal/information/information/information",
     "pages/personal/dubious-face/face-detail/face-detail",
     "pages/home/socialInformation/socialInformation",
-    "pages/home/socialInformation/details/details"
+    "pages/home/socialInformation/details/details",
+    "pages/personal/IT-MJ/building/building",
+    "pages/personal/IT-MJ/renters/renters",
+    "pages/personal/IT-MJ/in-out/in-out",
+    "pages/personal/snap/record/record",
+    "pages/personal/lets/lets",
+    "pages/personal/school/school"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,14 +29,14 @@
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "/icon/index1.png",
-        "selectedIconPath": "/icon/index.png"
+        "iconPath": "/icon/home2.png",
+        "selectedIconPath": "/icon/home.png"
       },
       {
         "pagePath": "pages/personal/index/index",
         "text": "我的",
-        "iconPath": "/icon/my1.png",
-        "selectedIconPath": "/icon/my.png"
+        "iconPath": "/icon/my4.png",
+        "selectedIconPath": "/icon/my3.png"
       }
     ]
   },

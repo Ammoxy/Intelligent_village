@@ -1,4 +1,4 @@
-// pages/personal/IT-MJ/IT-MJ/IT-MJ.js
+// pages/personal/IT-MJ/renters/renters.js
 Page({
 
   /**
@@ -22,18 +22,18 @@ Page({
 
   },
 
-  toBuilding() {
-    var self = this;
-    wx.navigateTo({
-      url: '../building/building',
-    })
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
 
+  },
+
+  toLog() {
+    var self = this;
+    wx.navigateTo({
+      url: '../in-out/in-out',
+    })
   },
 
   /**
