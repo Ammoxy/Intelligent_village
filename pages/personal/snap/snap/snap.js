@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    dateBegin: '', // 开始时间
+    dateEnd: '', // 结束时间
   },
 
   /**
@@ -29,6 +30,7 @@ Page({
 
   },
 
+  // 抓拍记录
   toRecord() {
     var self = this;
     wx.navigateTo({
@@ -36,6 +38,31 @@ Page({
     })
   },
 
+  bindBegin(e) {
+    var self = this;
+    console.log(e);
+    self.setData({
+      dateBegin: e.detail.value
+    })
+  },
+  bindEnd(e) {
+    var self = this;
+    self.setData({
+      dateEnd: e.detail.value
+    })
+  },
+
+  search() {
+    var self = this;
+    if (self.data.dateBegin && self.data.dateEnd) {
+      console.log(111);
+    } else {
+      wx.showToast({
+        icon: "none",
+        title: '请选择时间',
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

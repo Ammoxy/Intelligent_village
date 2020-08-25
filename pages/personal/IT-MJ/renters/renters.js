@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    keyword: ''
   },
 
   /**
@@ -34,6 +34,26 @@ Page({
     wx.navigateTo({
       url: '../in-out/in-out',
     })
+  },
+
+  bindKeyInput(e) {
+    var self = this;
+    self.setData({
+      keyword: e.detail.value
+    })
+  },
+
+  search() {
+    var self = this;
+    if (self.data.keyword) {
+      console.log(111);
+    } else {
+      wx.showToast({
+        icon: "none",
+        title: '请输入姓名',
+      })
+    }
+    console.log(self.data.keyword);
   },
 
   /**

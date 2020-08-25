@@ -13,31 +13,22 @@
 		</view>
 		<button>详情</button>
 	</view> -->
-	<view class="search">
-		<input placeholder="请输入姓名"></input>
-		<view class="img_box">
-			<icon class="icon-small" type="search" size="15"></icon>
-			<!-- <image></image> -->
-		</view>
-	</view>
 	<view class="header">
 		<text class="address">身份</text>
+		<text class="address">姓名</text>
 		<text class="homes">单元</text>
-		<!-- <text class="homes">租客</text> -->
 		<text class="header_btn">操作</text>
 	</view>
 	<view class="top"></view>
-
 	<view class="list">
 		<view class="info-list">
 			<view class="list_img">
 				租客
 			</view>
 			<view class="list_box">111</view>
-			<!-- <view class="list_box">111</view> -->
+			<view class="list_box">111</view>
 			<view class="list_btn">
 				<button class="btn" type="primary" size="mini" bindtap="toLog">进出记录</button>
-				<!-- <button class="mini-btn" type="warn" size="mini" bindtap="delete">删除</button> -->
 			</view>
 		</view>
 	</view>

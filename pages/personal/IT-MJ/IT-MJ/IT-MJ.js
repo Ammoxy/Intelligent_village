@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    keyword: ''
   },
 
   /**
@@ -21,12 +21,32 @@ Page({
   onReady: function () {
 
   },
-
+  // 详情--楼顶管理
   toBuilding() {
     var self = this;
     wx.navigateTo({
       url: '../building/building',
     })
+  },
+  bindKeyInput(e) {
+    console.log(e.detail.value);
+    var self = this;
+    self.setData({
+      keyword: e.detail.value
+    })
+  },
+  // 搜索
+  search() {
+    var self = this;
+    if (self.data.keyword) {
+      console.log(111);
+    } else {
+      wx.showToast({
+        icon: "none",
+        title: '请输入地址',
+      })
+    }
+    console.log(self.data.keyword);
   },
 
   /**

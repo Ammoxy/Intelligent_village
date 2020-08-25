@@ -1,11 +1,9 @@
 page {
-  /* position: relative; */
   height: 100%;
   width: 100%;
 }
 
 .box {
-  /* padding: 0 0 40rpx 40rpx; */
   background-color: #fff;
   font-size: 30rpx;
   overflow: hidden;
@@ -13,46 +11,12 @@ page {
 
 .box .top {
   width: 100%;
-  height: 140rpx;
-}
-
-.box .search {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
   height: 75rpx;
-  display: flex;
-  background-color: #f0f5f8;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 10;
 }
-.box .search input {
-  width: 90%;
-  border: 2rpx solid #ddd;
-  border-radius: 40rpx;
-  background-color: #fff;
-  padding: 4rpx 15rpx;
-  font-size: 24rpx;
-  margin-left: 20rpx;
-}
-
-.box .search .img_box {
-  width: 10%;
-  margin-left: 10rpx;
-}
-
-.box .search .img_box image {
-  width: 65rpx;
-  height: 65rpx;
-}
-
 
 .box .header {
   position: fixed;
-  top: 75rpx;
+  top: 0;
   left: 0;
   right: 0;
   background-color: #fff;
@@ -62,39 +26,25 @@ page {
 
   display: flex;
   z-index: 100;
-  /* padding: 20rpx 0; */
-  /* text-align: center; */
   height: 65rpx;
   align-items: center;
   justify-content: space-between;
 }
 
 .box .header .address {
-  /* width: calc(100% / 3); */
-  /* border-right: 2rpx solid rgb(71, 59, 59); */
-  
   width: 30%;
 }
 
 .box .header .homes {
-  /* width: calc(100% / 3); */
-  /* border-right: 2rpx solid rgb(71, 59, 59); */
   width: 30%;
 }
 
 .box .header .header_btn {
-  /* width: calc(100% / 3); */
-  /* border-right: 2rpx solid rgb(71, 59, 59); */
   width: 30%;
 }
 
 .box .list {
-  /* padding: 20rpx 25rpx 20rpx 0; */
   width: 100%;
-  /* position: absolute; */
-  /* top: 65rpx; */
-  /* left: 0; */
-  /* right: 0; */
   height: 100rpx;
   border-bottom: 2rpx solid #ddd;
   background-color: #fff;
@@ -107,7 +57,6 @@ page {
 .box .list .info-list {
   display: flex;
   width: 100%;
-  /* text-align: center; */
   align-items: center;
   justify-content: space-between;
 }
@@ -118,37 +67,25 @@ page {
 
 .box .list:nth-child(2n + 1) {
   background-color: #fff;
-
 }
 
 .box .list .info-list .list_img {
-  /* display: flex; */
   align-items: center;
-  /* width: calc(100% / 3); */
   width: 30%;
   height: 100%;
-  margin: 0 10rpx;
-
-  /* background-color: blue; */
 }
 
 .box .list .info-list .list_box {
-  /* display: flex; */
   align-items: center;
-  /* width: calc(100% / 3); */
   width: 30%;
   height: 100%;
-  /* background-color: blue; */
 }
 
 .box .list .info-list .list_btn {
   display: flex;
   align-items: center;
-  /* width: calc(100% / 3); */
   width: 30%;
   height: 100%;
-  /* text-align: center; */
-  /* background-color: blue; */
 }
 
 .box .list .info-list .list_img {
@@ -166,18 +103,13 @@ page {
 
 .box .list text {
   width: 170rpx;
-  /* text-align: left; */
 }
 
 .box .list .relationship {
   width: 200rpx;
-  /* text-align: center; */
 }
 
-/* 去审核 */
-
 .list .info-list .list_btn .btn {
-  /* width: 100rpx; */
   width: 162rpx;
   height: 60rpx;
   line-height: 60rpx;
@@ -200,9 +132,7 @@ button::after {
 button[type=warn] {
   color: #fff;
   background-color: #e64340;
-
 }
-
 
 .notData {
   padding: 50rpx 0;

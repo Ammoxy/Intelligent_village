@@ -14,8 +14,8 @@
 		<button>详情</button>
 	</view> -->
 	<view class="search">
-		<input placeholder="请输入地址"></input>
-		<view class="img_box">
+		<input placeholder="请输入地址" bindblur="bindKeyInput"></input>
+		<view class="img_box" bindtap="search">
 			<icon class="icon-small" type="search" size="15"></icon>
 			<!-- <image></image> -->
 		</view>

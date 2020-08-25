@@ -13,6 +13,18 @@
 		</view>
 		<button>详情</button>
 	</view> -->
+	<view class="search">
+		<picker mode="date" start="2020-01-01" end="2030-01-01" bindchange="bindBegin">
+			<input placeholder="开始时间" disabled="true" value="{{dateBegin}}"></input>
+		</picker>
+		<view>至</view>
+		<picker mode="date" start="2020-01-01" end="2030-01-01" bindchange="bindEnd">
+			<input placeholder="结束时间" disabled="true" value="{{dateEnd}}"></input>
+		</picker>
+		<view class="img_box" bindtap="search">
+			<icon class="icon-small" type="search" size="15"></icon>
+		</view>
+	</view>
 	<view class="header">
 		<!-- <text class="header_img">单元</text> -->
 		<text class="header_box">地址</text>
@@ -31,7 +43,7 @@
 			</view>
 		</view>
 	</view>
-		<view class="list">
+	<view class="list">
 		<view class="info-list">
 			<!-- <view class="list_img">
 				<image src="/icon/unit.png"></image>
