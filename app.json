@@ -14,7 +14,12 @@
     "pages/personal/IT-MJ/in-out/in-out",
     "pages/personal/snap/record/record",
     "pages/personal/lets/lets",
-    "pages/personal/school/school"
+    "pages/personal/school/school",
+    "pages/personal/device/device",
+    "pages/personal/device/device-detail/device-detail",
+    "pages/personal/device/device-info/device-info",
+    "pages/personal/device/device-logs/device-logs",
+    "pages/personal/device/device-capture/device-capture"
   ],
   "window": {
     "backgroundTextStyle": "light",

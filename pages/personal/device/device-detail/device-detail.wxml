@@ -1,0 +1,26 @@
+<!--pages/personal/device/device-detail/device-detail.wxml-->
+<view class="list">
+	<!-- <block wx:for="{{idenInfoList}}" wx:key="{{index}}"> -->
+		<button class="iden-btn" bindtap="toDeviceIhfo">
+			<view class="tableviewcell" >
+				<text class="adress">设备信息</text>
+        <!-- <text style="color: #ccc">222</text> -->
+				<image class="right-icon" src="/icon/right.png" />
+			</view>
+		</button>
+    	<button class="iden-btn" bindtap="toDeviceLogs">
+			<view class="tableviewcell" >
+				<text class="adress">进出记录</text>
+        <!-- <text style="color: #ccc">222</text> -->
+				<image class="right-icon" src="/icon/right.png" />
+			</view>
+		</button>
+    	<button class="iden-btn" bindtap="toDeviceCaptrue">
+			<view class="tableviewcell" >
+				<text class="adress">抓拍记录</text>
+        <!-- <text style="color: #ccc">222</text> -->
+				<image class="right-icon" src="/icon/right.png" />
+			</view>
+		</button>
+	<!-- </block> -->
+</view>

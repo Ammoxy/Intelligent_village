@@ -8,3 +8,12 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.header {
+  /* padding: 0 10rpx; */
+  border-bottom: 2rpx solid #ddd;
+
+}
+.c_header {
+  padding: 0 10rpx;
+}

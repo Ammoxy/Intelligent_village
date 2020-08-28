@@ -2,12 +2,13 @@ page {
   /* position: relative; */
   height: 100%;
   width: 100%;
+  font-size: 28rpx;
 }
 
 .box {
   /* padding: 0 0 40rpx 40rpx; */
   background-color: #fff;
-  font-size: 30rpx;
+  /* font-size: 30rpx; */
   overflow: hidden;
 }
 

@@ -3,19 +3,19 @@ page {
   background-color: #eee;
 }
 /* 轮播图 */
-.header {
+.banner_header {
   position: relative;
   width: 100vw;
   height: 56.25vw;
   background-color: #ddd;
 }
 
-.header .swiper {
+.banner_header .swiper {
   width: 100vw;
   height: 56.25vw;
 }
 
-.header .swiper .slide-image {
+.banner_header .swiper .slide-image {
   width: 100vw;
   height: 56.25vw;
 }

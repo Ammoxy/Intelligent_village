@@ -2,7 +2,7 @@
 <view class="box">
 	<view class="header">
 		<view class="header_img">
-			<image class="auto_img" src="https://tu.fengniaotuangou.cn/tmp_ff1b709c323f134045df80bea705bde2bfd57d1d90686b6f.jpg" bindtap="toImg"></image>
+			<image mode="aspectFit" class="auto_img" src="https://tu.fengniaotuangou.cn/tmp_ff1b709c323f134045df80bea705bde2bfd57d1d90686b6f.jpg" bindtap="toImg"></image>
 		</view>
 		<view class="heaser_content">
 			<view class="info">
@@ -21,14 +21,14 @@
 			<text class="address">龙瑞大街40号龙瑞大街40号龙瑞大街40号龙瑞大街40号龙瑞大街40号龙瑞大街40号</text>
 			<text class="time">2020-07-11 08:18:05</text>
 			<view class="face_img">
-				<image class="auto_img" src="https://tu.fengniaotuangou.cn/tmp_ff1b709c323f134045df80bea705bde2bfd57d1d90686b6f.jpg" bindtap="toListImg"></image>
+				<image class="auto_img" mode="aspectFit" src="https://tu.fengniaotuangou.cn/tmp_ff1b709c323f134045df80bea705bde2bfd57d1d90686b6f.jpg" bindtap="toListImg"></image>
 			</view>
 		</view>
 		<view class="c_content">
 			<text class="address">龙瑞大街40号龙瑞大街40号龙瑞大街40号龙瑞大街40号龙瑞大街40号龙瑞大街40号</text>
 			<text class="time">2020-07-11 08:18:05</text>
 			<view class="face_img">
-				<image class="auto_img" src="https://tu.fengniaotuangou.cn/tmp_ff1b709c323f134045df80bea705bde2bfd57d1d90686b6f.jpg" bindtap="toListImg"></image>
+				<image class="auto_img" mode="aspectFit" src="https://tu.fengniaotuangou.cn/tmp_ff1b709c323f134045df80bea705bde2bfd57d1d90686b6f.jpg" bindtap="toListImg"></image>
 			</view>
 		</view>
 	</view>

@@ -9,8 +9,9 @@ page {
 .auto_img {
   display: block;
   width: 150rpx;
-  height: 200rpx;
+  height: 180rpx;
   margin-left: 25rpx;
+  padding: 10rpx;
 }
 
 .box {
@@ -30,7 +31,8 @@ page {
 }
 
 .box .header .header_img {
-  width: 35%;
+  width: 200rpx;
+  height: 200rpx;
 }
 
 .box .header .heaser_content {
@@ -89,6 +91,7 @@ page {
   border-bottom: 2rpx solid #ddd;
   height: 100rpx;
   align-items: center;
+  padding-left: 10rpx;
 }
 
 .box .content .c_content:nth-child(2n + 1) {

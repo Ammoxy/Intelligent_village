@@ -1,0 +1,12 @@
+<!--pages/personal/device/device.wxml-->
+<view class="list">
+	<!-- <block wx:for="{{idenInfoList}}" wx:key="{{index}}"> -->
+		<button class="iden-btn" bindtap="toDetail">
+			<view class="tableviewcell" >
+				<text class="adress">111</text>
+        <!-- <text style="color: #ccc">222</text> -->
+				<image class="right-icon" src="/icon/right.png" />
+			</view>
+		</button>
+	<!-- </block> -->
+</view>

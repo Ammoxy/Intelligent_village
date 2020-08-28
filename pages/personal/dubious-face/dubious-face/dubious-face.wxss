@@ -1,13 +1,10 @@
 page {
-  /* position: relative; */
   height: 100%;
   width: 100%;
+  font-size: 28rpx;
 }
 .box {
-  /* padding: 0 0 40rpx 40rpx; */
   background-color: #fff;
-  font-size: 30rpx;
-  overflow: hidden;
 }
 
 .box .top {
@@ -16,47 +13,37 @@ page {
 }
 
 .box .header {
+  text-align: center;
   position: fixed;
   width: 100%;
-  border-bottom: 2rpx solid #ddd;
-
   display: flex;
   z-index: 100;
-  /* padding: 20rpx 0; */
-  /* text-align: center; */
   height: 65rpx;
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
-  z-index: 10;
 }
 
 .box .header .header_img {
-  /* width: calc(100% / 3); */
-  /* border-right: 2rpx solid rgb(71, 59, 59); */
-  width: 30%;
+  flex: 1;
+  padding: 10rpx;
 }
 
 .box .header .header_box {
-  /* width: calc(100% / 3); */
-  /* border-right: 2rpx solid rgb(71, 59, 59); */
-  width: 40%;
+  flex: 1;
+  padding: 10rpx;
+
 }
 
 .box .header .header_btn {
-  /* width: calc(100% / 3); */
-  /* border-right: 2rpx solid rgb(71, 59, 59); */
-  width: 30%;
+  flex: 1;
+  padding: 10rpx;
 }
 
 .box .list {
-  /* padding: 20rpx 25rpx 20rpx 0; */
+  text-align: center;
   width: 100%;
-  /* position: absolute; */
-  /* top: 65rpx; */
-  /* left: 0; */
-  /* right: 0; */
-  height: 100rpx;
+  /* height: 120rpx; */
   border-bottom: 2rpx solid #ddd;
   background-color: #fff;
   color: #666;
@@ -68,7 +55,6 @@ page {
 .box .list .info-list {
   display: flex;
   width: 100%;
-  /* text-align: center; */
   align-items: center;
   justify-content: space-between;
 }
@@ -81,37 +67,26 @@ page {
 }
 
 .box .list .info-list .list_img {
-  /* display: flex; */
   align-items: center;
-  /* width: calc(100% / 3); */
-  width: 30%;
-  height: 100%;
-  /* background-color: blue; */
+  flex: 1;
 }
 
 .box .list .info-list .list_box {
-  /* display: flex; */
   align-items: center;
-  /* width: calc(100% / 3); */
-  width: 40%;
-  height: 100%;
-  /* background-color: blue; */
+  flex: 1;
+  padding: 10rpx;
 }
 
 .box .list .info-list .list_btn {
-  display: flex;
   align-items: center;
-  /* width: calc(100% / 3); */
-  width: 30%;
-  height: 100%;
-  /* text-align: center; */
-  /* background-color: blue; */
+  flex: 1;
+  padding: 10rpx;
 }
 
 .box .list .info-list .list_img image {
   width: 68rpx;
   height: 90rpx;
-  margin: 0 10rpx;
+  padding: 10rpx;
 }
 
 .box .list .info-list .guardian {
@@ -122,18 +97,13 @@ page {
 
 .box .list text {
   width: 170rpx;
-  /* text-align: left; */
 }
 
 .box .list .relationship {
   width: 200rpx;
-  /* text-align: center; */
 }
 
-/* 去审核 */
-
 .list .info-list .list_btn .btn {
-  /* width: 100rpx; */
   width: 156rpx;
   height: 60rpx;
   line-height: 60rpx;
@@ -145,23 +115,6 @@ page {
   font-size: 30rpx;
 }
 
-.mini-btn{
-  margin-left: 6rpx;
-}
-
 button::after {
   border: none;
-}
-
-button[type=warn] {
-  color: #fff;
-  background-color: #e64340;
-  
- }
-  
-
-.notData {
-  padding: 50rpx 0;
-  text-align: center;
-  font-size: 30rpx;
 }

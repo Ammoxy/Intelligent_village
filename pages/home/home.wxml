@@ -10,7 +10,7 @@
 	</picker>
 </view>
 <view class="box">
-	<view class="header">
+	<view class="banner_header">
 		<swiper class="swiper" circular="true" autoplay="true" interval="5000" duration="1000">
 			<block wx:for="{{banners}}" wx:key="{{index}}">
 				<swiper-item>

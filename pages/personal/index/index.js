@@ -123,7 +123,7 @@ Page({
     //   })
     // }
     wx.navigateTo({
-      url: '../IT-MJ/IT-MJ/IT-MJ'
+      url: '../device/device'
     })
   },
   // 去抓拍抢
