@@ -1,0 +1,12 @@
+<view class="renter">
+	<view bindtap="toUser">查看抓拍记录</view>
+	<view bindtap="toInOutLogs">查看进出记录</view>
+</view>
+<view class="renter" bindtap="toRenter">
+	<view bindtap="toUser">查看抓拍记录</view>
+	<view bindtap="toInOutLogs">查看进出记录</view>
+</view>
+<view class="renter" bindtap="toRenter">
+	<view bindtap="toUser">查看抓拍记录</view>
+	<view bindtap="toInOutLogs">查看进出记录</view>
+</view>

@@ -15,7 +15,8 @@
     "pages/personal/rent/renter/renter",
     "pages/login/index",
     "pages/home/home",
-    "pages/personal/access/access/access"
+    "pages/personal/access/access/access",
+    "pages/personal/access/access-device/access-device"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -7,9 +7,9 @@ Page({
   data: {
 
   },
-  toRenter() {
+  toDevice() {
       wx.navigateTo({
-        url: '../renter/renter',
+        url: '../access-device/access-device',
       })
   }
 })
