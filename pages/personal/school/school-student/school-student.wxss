@@ -1,0 +1,11 @@
+.renter {
+    display: flex;
+    border-bottom: 2rpx solid #ccc;
+    padding: 10rpx;
+}
+
+.renter view {
+    flex: 1;
+    padding-left: 20rpx;
+    color: #378dbb;
+}

@@ -1,0 +1,12 @@
+<view class="school" bindtap="toTeacher">
+    <text>教师信息</text>
+    <image src="/icon/right.png"></image>
+</view>
+<view class="school" bindtap="toStudent">
+    <text>学生信息</text>
+    <image src="/icon/right.png"></image>
+</view>
+<view class="school" bindtap="toRenter">
+    <text>抓拍机信息</text>
+    <image src="/icon/right.png"></image>
+</view>

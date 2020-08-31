@@ -1,0 +1,74 @@
+<view class="table">
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+
+	<view class="tr">
+		<view class="time">2020-02-31 18:00:00</view>
+		<view class="state">进</view>
+		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	</view>
+</view>

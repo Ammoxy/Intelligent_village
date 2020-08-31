@@ -14,7 +14,7 @@
 		</view>
 		<view class="user" wx:else>
 			<image class="avator" src="/icon/qb.png" style="border:8rpx solid #fff;"></image>
-			<button size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即登录</button>
+			<button size="mini" bindtap="toLogin">立即登录</button>
 		</view>
 	</view>
 
@@ -50,14 +50,19 @@
 	<view class="plate">
 		<view class="title">地址信息</view>
 		<view class="list">
-			<view bindtap="toLet">
-				<image src="/icon/unit.png" />
-				<text>出租屋</text>
-			</view>
-			<view bindtap="toSchool">
-				<image src="/icon/school.png" />
-				<text>学校</text>
-			</view>
+			<picker bindchange="rentChange" value="{{index}}" range-key="name" range="{{areaList}}">
+				<view>
+					<image src="/icon/unit.png" />
+					<text>出租屋</text>
+				</view>
+			</picker>
+			<picker bindchange="schoolChange" value="{{index}}" range-key="name" range="{{areaList}}">
+				<view>
+					<image src="/icon/school.png" />
+					<text>学校</text>
+				</view>
+			</picker>
+
 		</view>
 	</view>
 </view>

@@ -1,0 +1,12 @@
+<view class="renter">
+	<view bindtap="toStudentInfo">学生一</view>
+	<view bindtap="toInOutLogs">查看进出记录</view>
+</view>
+<view class="renter">
+	<view bindtap="toStudentInfo">学生二</view>
+	<view bindtap="toInOutLogs">查看进出记录</view>
+</view>
+<view class="renter">
+	<view bindtap="toStudentInfo">学生三</view>
+	<view bindtap="toInOutLogs">查看进出记录</view>
+</view>

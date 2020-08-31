@@ -1,0 +1,20 @@
+.table .thead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table .tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx;
+    border-bottom: 2rpx solid #ccc;
+}
+
+.table .tr image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+
+

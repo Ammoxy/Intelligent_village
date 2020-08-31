@@ -1,0 +1,17 @@
+.address {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2rpx solid #ccc;
+    padding: 10rpx;
+}
+
+.address text {
+    padding-left: 20rpx;
+    color: #378dbb;
+}
+
+.address image {
+    width: 40rpx;
+    height: 40rpx;
+}
+

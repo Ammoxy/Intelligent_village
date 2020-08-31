@@ -1,25 +1,22 @@
 {
   "pages": [
     "pages/personal/index/index",
-    "pages/home/home",
-    "pages/personal/dubious-face/dubious-face/dubious-face",
-    "pages/personal/IT-MJ/IT-MJ/IT-MJ",
-    "pages/personal/snap/snap/snap",
-    "pages/personal/information/information/information",
-    "pages/personal/dubious-face/face-detail/face-detail",
-    "pages/home/socialInformation/socialInformation",
-    "pages/home/socialInformation/details/details",
-    "pages/personal/IT-MJ/building/building",
-    "pages/personal/IT-MJ/renters/renters",
-    "pages/personal/IT-MJ/in-out/in-out",
-    "pages/personal/snap/record/record",
-    "pages/personal/lets/lets",
-    "pages/personal/school/school",
-    "pages/personal/device/device",
-    "pages/personal/device/device-detail/device-detail",
-    "pages/personal/device/device-info/device-info",
-    "pages/personal/device/device-logs/device-logs",
-    "pages/personal/device/device-capture/device-capture"
+
+    "pages/personal/school/school/school",
+    "pages/personal/school/school-info/school-info",
+    "pages/personal/school/school-teacher/school-teacher",
+    "pages/personal/school/school-teacher-info/school-teacher-info",
+    "pages/personal/school/school-teacher-inout/school-teacher-inout",
+    "pages/personal/school/school-student/school-student",
+    "pages/personal/school/school-student-info/school-student-info",
+    "pages/personal/school/school-student-inout/school-student-inout",
+    
+    "pages/personal/rent/rent/rent",
+    "pages/personal/rent/renter-inout/renter-inout",
+    "pages/personal/rent/renter-info/renter-info",
+    "pages/personal/rent/renter/renter",
+    "pages/login/index",
+    "pages/home/home"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,8 +27,7 @@
   "tabBar": {
     "color": "#000",
     "selectedColor": "#378dbb",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "/icon/home2.png",

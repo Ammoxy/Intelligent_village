@@ -1,0 +1,4 @@
+<view class="school" bindtap="toSchool">
+    <text>测试学校</text>
+    <image src="/icon/right.png"></image>
+</view>
