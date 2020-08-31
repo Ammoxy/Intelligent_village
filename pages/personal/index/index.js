@@ -11,10 +11,11 @@ Page({
    */
   data: {
     wxInfo: null,
+    areaList: [],
+    area_id: ''
   },
 
   onLoad: function (options) {
-    console.log('options', options);
 
     this.setData({
       
@@ -127,7 +128,7 @@ Page({
     })
   },
   // 去抓拍抢
-  toSnap() {
+  choiceArea() {
     var self = this;
     // if (!wx.getStorageSync('token')) {
     //   wx.showToast({
@@ -138,9 +139,7 @@ Page({
     // } else {
       
     // }
-    wx.navigateTo({
-      url: '../snap/snap/snap'
-    })
+    
   },
 
   // 去出租屋

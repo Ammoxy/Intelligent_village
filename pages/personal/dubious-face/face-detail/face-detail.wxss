@@ -10,8 +10,6 @@ page {
   display: block;
   width: 150rpx;
   height: 180rpx;
-  margin-left: 25rpx;
-  padding: 10rpx;
 }
 
 .box {
@@ -59,7 +57,7 @@ page {
   border-bottom: 2rpx solid #ddd;
   border-top: 2rpx solid #ddd;
   display: flex;
-  height: 80rpx;
+  height: 75rpx;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
@@ -70,16 +68,22 @@ page {
 
 
 
-.box .content .c_header .header_img {
-  width: 45%;
+.box .content .c_header .header_address {
+  /* width: 45%; */
+  flex: 3;
+  padding: 10rpx;
 }
 
 .box .content .c_header .header_box {
-  width: 40%;
+  /* width: 40%; */
+  padding: 10rpx;
+  flex: 2;
 }
 
-.box .content .c_header .header_btn {
-  width: 15%;
+.box .content .c_header .header_img {
+  /* width: 15%; */
+  padding: 10rpx;
+  flex: 1;
 }
 
 .box .content .c_content {
@@ -89,7 +93,7 @@ page {
   right: 0;
   display: flex;
   border-bottom: 2rpx solid #ddd;
-  height: 100rpx;
+  height: 106rpx;
   align-items: center;
   padding-left: 10rpx;
 }
@@ -103,7 +107,9 @@ page {
 }
 
 .box .content .c_content .address {
-  width: 45%;
+  /* width: 45%; */
+  flex: 3;
+  padding: 0 10rpx;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -111,15 +117,20 @@ page {
 }
 
 .box .content .c_content .time {
-  width: 40%;
+  /* width: 40%; */
+  flex: 2;
+  padding: 10rpx;
 }
 
 .box .content .c_content .face_img {
-  width: 15%;
+  /* width: 15%; */
+  flex: 1;
+  /* padding: 10rpx; */
 }
 
 .box .content .c_content .face_img .auto_img {
-  width: 75rpx;
-  height: 100rpx;
-  display: block;
+  width: 68rpx;
+  height: 90rpx;
+  padding: 10rpx;
+  
 }

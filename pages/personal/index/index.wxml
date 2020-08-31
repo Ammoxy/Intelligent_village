@@ -39,10 +39,12 @@
 				<image src="/icon/rke.png" />
 				<text>门禁机</text>
 			</view>
-			<view bindtap="toSnap">
-				<image src="/icon/capture.png" />
-				<text>抓拍枪</text>
-			</view>
+			<picker bindchange="choiceArea" range="{{areaList}}" range-key="remark" value="{{index}}" class="picker">
+				<view>
+					<image src="/icon/area.png" />
+					<text>选择辖区</text>
+				</view>
+			</picker>
 		</view>
 	</view>
 	<view class="plate">
