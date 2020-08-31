@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/personal/index/index",
-
     "pages/personal/school/school/school",
     "pages/personal/school/school-info/school-info",
     "pages/personal/school/school-teacher/school-teacher",
@@ -10,13 +9,13 @@
     "pages/personal/school/school-student/school-student",
     "pages/personal/school/school-student-info/school-student-info",
     "pages/personal/school/school-student-inout/school-student-inout",
-    
     "pages/personal/rent/rent/rent",
     "pages/personal/rent/renter-inout/renter-inout",
     "pages/personal/rent/renter-info/renter-info",
     "pages/personal/rent/renter/renter",
     "pages/login/index",
-    "pages/home/home"
+    "pages/home/home",
+    "pages/personal/access/access/access"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,7 +26,8 @@
   "tabBar": {
     "color": "#000",
     "selectedColor": "#378dbb",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "/icon/home2.png",

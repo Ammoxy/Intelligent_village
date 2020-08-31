@@ -1,0 +1,5 @@
+
+<view class="address" bindtap="toRenter">
+    <text>设备一</text>
+    <image src="/icon/right.png"></image>
+</view>

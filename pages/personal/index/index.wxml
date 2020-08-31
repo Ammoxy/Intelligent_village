@@ -35,14 +35,10 @@
 	<view class="plate">
 		<view class="title">设备</view>
 		<view class="list">
-			<view bindtap="toIT_MJ">
-				<image src="/icon/rke.png" />
-				<text>门禁机</text>
-			</view>
-			<picker bindchange="choiceArea" range="{{areaList}}" range-key="remark" value="{{index}}" class="picker">
+			<picker bindchange="accessChange" value="{{index}}" range-key="name" range="{{areaList}}">
 				<view>
-					<image src="/icon/area.png" />
-					<text>选择辖区</text>
+					<image src="/icon/rke.png" />
+					<text>门禁机</text>
 				</view>
 			</picker>
 		</view>

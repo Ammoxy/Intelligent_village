@@ -49,5 +49,11 @@ Page({
     wx.navigateTo({
       url: '../school/school/school?area_id=' + e.detail.value,
     })
-  }
+  },
+  // 选择门禁机
+  accessChange(e) {
+    wx.navigateTo({
+      url: '../access/access/access?area_id=' + e.detail.value,
+    })
+  },
 })
