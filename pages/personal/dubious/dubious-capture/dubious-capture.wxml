@@ -1,0 +1,28 @@
+<scroll-view class="scroll-view_H" scroll-x="{{true}}">
+	<view class="table">
+		<view class="tr">
+			<view class="name">张三</view>
+			<view>
+				<image mode="aspectFill" src="/icon/cover_img.png"></image>
+			</view>
+			<view>
+				<image mode="aspectFill" src="/icon/cover_img.png"></image>
+			</view>
+			<view class="state">80.5</view>
+			<view class="address">中山</view>
+			<view class="time">2020-02-31 18:00:00</view>
+		</view>
+		<view class="tr">
+			<view class="name">张三</view>
+			<view>
+				<image mode="aspectFill" src="/icon/cover_img.png"></image>
+			</view>
+			<view>
+				<image mode="aspectFill" src="/icon/cover_img.png"></image>
+			</view>
+			<view class="state">80.5</view>
+			<view class="address">中山</view>
+			<view class="time">2020-02-31 18:00:00</view>
+		</view>
+	</view>
+</scroll-view>

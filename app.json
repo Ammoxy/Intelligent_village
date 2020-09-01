@@ -16,7 +16,12 @@
     "pages/login/index",
     "pages/home/home",
     "pages/personal/access/access/access",
-    "pages/personal/access/access-device/access-device"
+    "pages/personal/access/access-device/access-device",
+    "pages/personal/access/access-device-inout/access-device-inout",
+    "pages/personal/access/access-device-capture/access-device-capture",
+    "pages/personal/dubious/dubious/dubious",
+    "pages/personal/dubious/dubious-info/dubious-info",
+    "pages/personal/dubious/dubious-capture/dubious-capture"
   ],
   "window": {
     "backgroundTextStyle": "light",

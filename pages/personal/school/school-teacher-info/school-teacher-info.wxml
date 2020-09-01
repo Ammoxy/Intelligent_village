@@ -26,12 +26,12 @@
 	</view>
 	<!-- 如果是班主任显示年级班级 -->
 	<view class="item">
-		<image src="/icon/ID.png"></image>
+		<image src="/icon/grade.png"></image>
 		<text>年级</text>
 		<text class="info">一年级</text>
 	</view>
 	<view class="item">
-		<image src="/icon/ID.png"></image>
+		<image src="/icon/class.png"></image>
 		<text>班级</text>
 		<text class="info">二班</text>
 	</view>

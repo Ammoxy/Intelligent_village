@@ -1,26 +1,26 @@
 <view class="user">
 	<view class="item">
-        <image src="/icon/user.png"></image>
+		<image src="/icon/user.png"></image>
 		<text>姓名</text>
 		<text class="info">刘建新</text>
 	</view>
 	<view class="item">
-        <image src="/icon/sex1.png"></image>
+		<image src="/icon/sex1.png"></image>
 		<text>性别</text>
 		<text class="info">男</text>
 	</view>
 	<view class="item">
-        <image src="/icon/iphone.png"></image>
+		<image src="/icon/grade.png"></image>
 		<text>年级</text>
 		<text class="info">一年级</text>
 	</view>
-    	<view class="item">
-        <image src="/icon/iphone.png"></image>
+	<view class="item">
+		<image src="/icon/class.png"></image>
 		<text>班级</text>
 		<text class="info">一班</text>
 	</view>
 	<view class="item">
-        <image src="/icon/ID.png"></image>
+		<image src="/icon/ID.png"></image>
 		<text>学号</text>
 		<text class="info">1234569</text>
 	</view>

@@ -1,4 +1,4 @@
-// pages/personal/access/access-device/access-device.js
+// pages/personal/dubious/dubious/dubious.js
 Page({
 
   /**
@@ -28,18 +28,15 @@ Page({
   onShow: function () {
 
   },
-  // 查看进出记录
-  toInOutLogs() {
-    var self = this;
+  toDubiousInfo() {
     wx.navigateTo({
-      url: '../access-device-inout/access-device-inout',
+      url: '../dubious-info/dubious-info',
     })
   },
-  // 抓拍记录
+
   toCapture() {
-    var self = this;
     wx.navigateTo({
-      url: '../access-device-capture/access-device-capture',
+      url: '../dubious-capture/dubious-capture',
     })
   },
 

@@ -1,0 +1,30 @@
+.table .thead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.scroll-view_H {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.table .tr {
+  white-space: nowrap;
+  padding: 10rpx;
+  border-bottom: 2rpx solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000rpx
+}
+
+.table .tr view {
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.table .tr image {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 10rpx 20rpx;
+}

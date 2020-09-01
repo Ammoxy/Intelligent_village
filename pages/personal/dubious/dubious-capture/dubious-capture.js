@@ -1,4 +1,4 @@
-// pages/personal/access/access-device/access-device.js
+// pages/personal/dubious/dubious-capture/dubious-capture.js
 Page({
 
   /**
@@ -27,20 +27,6 @@ Page({
    */
   onShow: function () {
 
-  },
-  // 查看进出记录
-  toInOutLogs() {
-    var self = this;
-    wx.navigateTo({
-      url: '../access-device-inout/access-device-inout',
-    })
-  },
-  // 抓拍记录
-  toCapture() {
-    var self = this;
-    wx.navigateTo({
-      url: '../access-device-capture/access-device-capture',
-    })
   },
 
   /**

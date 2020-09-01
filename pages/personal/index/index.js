@@ -56,4 +56,10 @@ Page({
       url: '../access/access/access?area_id=' + e.detail.value,
     })
   },
+  // 可疑人脸
+  toDubious() {
+    wx.navigateTo({
+      url: '../dubious/dubious/dubious'
+    })
+  },
 })

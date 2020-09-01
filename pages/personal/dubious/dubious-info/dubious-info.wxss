@@ -1,0 +1,38 @@
+.user {
+  padding: 20rpx;
+}
+
+.user .item {
+  display: flex;
+  border-bottom: 2rpx solid #ccc;
+  padding: 20rpx;
+}
+
+.user .item image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.user .item text {
+  flex: 1;
+  padding-left: 20rpx;
+  color: #378dbb;
+}
+
+.user .item .info {
+  text-align: right;
+}
+
+/* 人脸图片 */
+.user .img-box {
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.user .img-box .img {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+
+

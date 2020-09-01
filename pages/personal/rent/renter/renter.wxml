@@ -1,12 +1,16 @@
-<view class="renter">
-	<view bindtap="toUser">用户</view>
-	<view bindtap="toInOutLogs">查看进出记录</view>
+<view class="search">
+	<input placeholder="请输入用户名"></input>
+	<image src="../../../../icon/search.png"></image>
 </view>
-<view class="renter" bindtap="toRenter">
-	<view bindtap="toUser">用户</view>
-	<view bindtap="toInOutLogs">查看进出记录</view>
-</view>
-<view class="renter" bindtap="toRenter">
-	<view bindtap="toUser">用户</view>
-	<view bindtap="toInOutLogs">查看进出记录</view>
+<view class="renter_box">
+	<view class="renter">
+		<view bindtap="toUser">用户</view>
+		<view bindtap="toInOutLogs">查看进出记录</view>
+	</view>
+	<view class="renter">
+		<view bindtap="toUser">用户</view>
+		<view bindtap="toInOutLogs">查看进出记录</view>
+	</view>
+
+
 </view>
