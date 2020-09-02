@@ -1,6 +1,9 @@
 {
   "pages": [
     "pages/personal/index/index",
+
+    "pages/register/index",
+
     "pages/personal/school/school/school",
     "pages/personal/school/school-info/school-info",
     "pages/personal/school/school-teacher/school-teacher",
@@ -21,8 +24,7 @@
     "pages/personal/access/access-device-capture/access-device-capture",
     "pages/personal/dubious/dubious/dubious",
     "pages/personal/dubious/dubious-info/dubious-info",
-    "pages/personal/dubious/dubious-capture/dubious-capture",
-    "pages/register/index"
+    "pages/personal/dubious/dubious-capture/dubious-capture"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,1 +1,42 @@
-/* pages/register/index.wxss */
+/* pages/register/index.wxss */.logo {
+    margin-top: 127rpx;
+    margin-bottom: 90rpx;
+    text-align: center;
+    font-size: 50rpx;
+    color: #378dbb;
+  }
+
+.login {
+    margin-top: 57.3rpx;
+  }
+
+.login .item {
+    padding: 10rpx 50rpx;
+}
+
+.login .item .input {
+    height: 70rpx;
+    line-height: 70rpx;
+    border-radius: 20rpx;
+    border: 2rpx solid #378dbb;
+    text-align: center;
+}
+
+.login .item .btn {
+    height: 70rpx;
+    line-height: 70rpx;
+    border-radius: 20rpx;
+    border: 2rpx solid #378dbb;
+}
+
+.fs {
+    font-size: 40rpx;
+}
+
+.href {
+    text-align: right;
+    padding-top: 20rpx;
+    padding-right: 70rpx;
+    color: #378dbb;
+}
+

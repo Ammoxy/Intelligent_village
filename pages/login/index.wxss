@@ -33,4 +33,10 @@
     font-size: 40rpx;
 }
 
+.href {
+    text-align: right;
+    padding-top: 20rpx;
+    padding-right: 70rpx;
+    color: #378dbb;
+}
 

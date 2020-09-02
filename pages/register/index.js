@@ -5,62 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    name: '',
+    password: '',
+    phone: '',
+    number: ''
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  nameInput(e) {
+    this.data.name = e.detail.value;
+  },
+  passwordInput(e) {
+    this.data.password = e.detail.value
+  },
+  phoneInput(e) {
+    this.data.phone = e.detail.value  
+  },
+  numberInput(e) {
+    this.data.number = e.detail.value
+  },
+  register() {
+    if(this.data.name && this.data.password && this.data.phone && this.data.number) {
+      wx.setStorageSync('name', this.data.name);
+      wx.setStorageSync('number', this.data.number)
 
+      wx.reLaunch({
+        url: '/pages/personal/index/index',
+      })
+    } else {
+      wx.showToast({
+        title: '请补充完整信息',
+        icon: 'none'
+      })
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  toLogin() {
+    wx.navigateTo({
+      url: '/pages/login/index',
+    })
   }
 })

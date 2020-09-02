@@ -10,6 +10,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    name: '',
+    number: '',
     wxInfo: null,
     areaList: [{
       name: '辖区一',
@@ -28,12 +30,15 @@ Page({
   },
 
   onLoad: function (options) {
+    this.setData({
+      name: wx.getStorageSync('name'),
+      number: wx.getStorageSync('number')
+    })
   },
-  onShow() {
-  },
+  onShow() {},
   toLogin() {
     wx.navigateTo({
-      url: "/pages/login/index"
+      url: "/pages/register/index"
     });
   },
 

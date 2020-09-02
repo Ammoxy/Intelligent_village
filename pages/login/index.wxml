@@ -5,13 +5,16 @@
 <view class="login">
   <form bindsubmit='login'>
     <view class="item">
-      <input name="username" class="input fs" placeholder="请输入账号" value="{{ username }}"/>
+      <input name="username" class="input fs" placeholder="请输入工号" value="{{ username }}"  bindblur='nameInput'/>
     </view>
     <view class="item">
-      <input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" />
+      <input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" bindblur='passwordInput'/>
     </view>
     <view class="item">
       <button class="btn fs" form-type='submit'>登录</button>
     </view>
   </form>
+    <view class="href">
+        <view bindtap="toRegister">无账号，去注册</view>
+    </view>
 </view>

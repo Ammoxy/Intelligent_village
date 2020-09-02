@@ -2,13 +2,15 @@
 <!-- <view style="min-height: 92vh;"> -->
 <view>
 	<view class="box">
-		<view class="user_log" wx:if="{{wxInfo}}">
+		<view class="user_log" wx:if="{{name}}">
 			<view class="user_img">
-				<image class="avator" src="{{wxInfo.avatarUrl}}" style="border:8rpx solid #fff;"></image>
+				<image class="avator" src="/icon/qb.png" style="border:8rpx solid #fff;"></image>
+
+				<!-- <image class="avator" src="{{wxInfo.avatarUrl}}" style="border:8rpx solid #fff;"></image> -->
 			</view>
 			<view class="user_content">
-				<view class="user_nickname">姓名: 安之</view>
-				<view class="user_nickname">编号: 114</view>
+				<view class="user_nickname">{{name}}</view>
+				<!-- <view class="user_nickname">工号: {{number}}</view> -->
 				<!-- <view class="user_nickname">辖区: 番禺</view> -->
 			</view>
 		</view>

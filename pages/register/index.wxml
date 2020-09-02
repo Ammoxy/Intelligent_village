@@ -1,2 +1,29 @@
-<!--pages/register/index.wxml-->
-<text>pages/register/index.wxml</text>
+<view class="logo">
+	<text>图巴诺智能乡村</text>
+</view>
+
+<view class="login">
+	<form bindsubmit='register'>
+		<view class="item">
+			<input name="name" class="input fs" placeholder="请输入姓名" value="{{ username }}" bindblur='nameInput'/>
+		</view>
+		<view class="item">
+			<input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" bindblur='passwordInput'/>
+		</view>
+		<view class="item">
+			<input name="phone" class="input fs" placeholder="请输入手机号" value="{{ phone }}" bindblur='phoneInput'/>
+		</view>
+		<!-- <view class="item">
+			<input name="password" class="input fs" placeholder="请输入身份证号" type="password" value="{{ password }}" />
+		</view> -->
+        <view class="item">
+			<input name="number" class="input fs" placeholder="请输入工号" value="{{ number }}" bindblur='numberInput'/>
+		</view>
+		<view class="item">
+			<button class="btn fs" form-type='submit'>注册</button>
+		</view>
+	</form>
+    <view class="href">
+        <view bindtap="toLogin">直接登录</view>
+    </view>
+</view>
