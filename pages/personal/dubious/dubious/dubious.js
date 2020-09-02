@@ -5,20 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    page: 1,
+    showFoot: false,
+    hasMore: true, // 还有数据, 上拉加载
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getData()
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+
+  },
+  // 获取数据
+  getData() {
+    var self = this;
+    // wx.showLoading({
+    //   title: '加载中...',
+    // })
 
   },
 
@@ -65,7 +75,16 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    if (this.data.hasMore) {
+      this.setData({
+        page: this.data.page + 1
+      })
+      this.getData(this.data.cateid)
+    } else {
+      this.setData({
+        showFoot: true
+      })
+    }
   },
 
   /**

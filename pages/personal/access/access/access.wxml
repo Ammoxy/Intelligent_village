@@ -1,5 +1,10 @@
-
-<view class="address" bindtap="toDevice">
-    <text>设备一</text>
-    <image src="/icon/right.png"></image>
+<view class="search">
+	<input placeholder="请输入设备号"></input>
+	<image src="../../../../icon/search.png"></image>
+</view>
+<view class="renter_box">
+	<view class="address" bindtap="toDevice">
+		<text>设备一</text>
+		<image src="/icon/right.png"></image>
+	</view>
 </view>

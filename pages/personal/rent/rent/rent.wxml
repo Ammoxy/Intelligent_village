@@ -1,5 +1,14 @@
-
-<view class="address" bindtap="toRenter">
-    <text>测试地址</text>
-    <image src="/icon/right.png"></image>
+<view class="search">
+	<input placeholder="请输入地址"></input>
+	<image src="../../../../icon/search.png"></image>
+</view>
+<view class="renter_box">
+	<view class="address" bindtap="toRenter">
+		<text>测试地址</text>
+		<image src="/icon/right.png"></image>
+	</view>
+    <view class="address" bindtap="toRenter">
+		<text>测试地址一</text>
+		<image src="/icon/right.png"></image>
+	</view>
 </view>
