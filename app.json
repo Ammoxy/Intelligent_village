@@ -21,7 +21,8 @@
     "pages/personal/access/access-device-capture/access-device-capture",
     "pages/personal/dubious/dubious/dubious",
     "pages/personal/dubious/dubious-info/dubious-info",
-    "pages/personal/dubious/dubious-capture/dubious-capture"
+    "pages/personal/dubious/dubious-capture/dubious-capture",
+    "pages/register/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

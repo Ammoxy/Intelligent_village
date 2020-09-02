@@ -16,9 +16,9 @@ App({
     }
     // 开关配置
     var version = '1.0.11';
-    global.configs(version).then(res => {
-      wx.setStorageSync('openFace', res.config_value);
-    })
+    // global.configs(version).then(res => {
+    //   wx.setStorageSync('openFace', res.config_value);
+    // })
   },
   onLaunch: function () {
     let self = this;
