@@ -3,7 +3,6 @@
     "pages/personal/index/index",
 
     "pages/register/index",
-
     "pages/personal/school/school/school",
     "pages/personal/school/school-info/school-info",
     "pages/personal/school/school-teacher/school-teacher",
@@ -35,8 +34,7 @@
   "tabBar": {
     "color": "#000",
     "selectedColor": "#378dbb",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "/icon/home2.png",

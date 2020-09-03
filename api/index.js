@@ -1,6 +1,20 @@
 const tools = require("../utils/tools.js");
 const url = require("./url.js");
-const baseUrl = require("./baseUrl.js");
+// const baseUrl = require("./baseUrl.js");
+
+function api() {
+  var api = __wxConfig.envVersion;
+  switch (api) {
+    case 'develop': // 开发服
+      return 'http://192.168.0.106/FaceCore/public/api';
+      break;
+    case 'trial': // 体验服
+      return 'http://192.168.0.106/FaceCore/public/api';
+      break;
+    default: // 正式服
+      return 'https://wsa.pofiapp.com';
+  }
+}
 
 var header = {
   'Accept': 'application/json',
@@ -23,9 +37,9 @@ function queryData(data) {
   return str;
 }
 
-function get(baseUrl, url, data, cb) {
+function get(url, data, cb) {
   wx.request({
-    url: baseUrl + url + queryData(data),
+    url: api() + url + queryData(data),
     method: 'get',
     header: header,
     success: function (res) {
@@ -78,9 +92,9 @@ function get(baseUrl, url, data, cb) {
 }
 
 
-function post(baseUrl, url, data, cb) {
+function post(url, data, cb) {
   wx.request({
-    url: baseUrl + url,
+    url: api() + url,
     method: 'post',
     data: data,
     header: header,
@@ -133,9 +147,9 @@ function post(baseUrl, url, data, cb) {
   });
 }
 
-function del(baseUrl, url, data, cb) {
+function del(url, data, cb) {
   wx.request({
-    url: baseUrl + url + queryData(data),
+    url: api() + url + queryData(data),
     method: 'delete',
     header: header,
     success: function (res) {
@@ -190,7 +204,9 @@ function del(baseUrl, url, data, cb) {
 // 导出
 module.exports = {
   url: url,
-  baseUrl: baseUrl,
+  // baseUrl: baseUrl,
+  api: api,
+
   get: get,
   post: post,
   delete: del

@@ -1,8 +1,4 @@
-var user = require('../../../model/user');
-var infomation = require('../../../model/personal/infomation');
 var app = getApp();
-var buy = require('../../../model/personal/buy')
-var door = require('../../../model/personal/door')
 
 Page({
 
@@ -45,26 +41,58 @@ Page({
   // 选择辖区
   rentChange(e) {
     console.log(e)
-    wx.navigateTo({
-      url: '../rent/rent/rent?area_id=' + e.detail.value,
-    })
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../rent/rent/rent?area_id=' + e.detail.value,
+      })
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   },
   // 选择学校
   schoolChange(e) {
-    wx.navigateTo({
-      url: '../school/school/school?area_id=' + e.detail.value,
-    })
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../school/school/school?area_id=' + e.detail.value,
+      });
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   },
   // 选择门禁机
   accessChange(e) {
-    wx.navigateTo({
-      url: '../access/access/access?area_id=' + e.detail.value,
-    })
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../access/access/access?area_id=' + e.detail.value,
+      })
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   },
   // 可疑人脸
   toDubious() {
-    wx.navigateTo({
-      url: '../dubious/dubious/dubious'
-    })
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../dubious/dubious/dubious'
+      })
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   },
 })

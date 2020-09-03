@@ -1,19 +1,9 @@
 App({
   onShow: function () {
     // this.getUserInfo();
-    var global = require('./model/global');
-    var imfomation = require('./model/personal/infomation')
+
     var self = this;
-    // 获取用户信息
-    if (wx.getStorageSync('token')) {
-      imfomation.userInfo(wx.getStorageSync('token')).then(res => {
-        if (res) {
-          wx.reLaunch({
-            url: "/pages/personal/index/change-user/change-user"
-          })
-        }
-      })
-    }
+   
     // 开关配置
     var version = '1.0.11';
     // global.configs(version).then(res => {
@@ -83,16 +73,6 @@ App({
 
 
   globalData: {
-    userInfo: null,
-    openFace: false,
-    typestring: null,
-    area_id: null,
-    address_id: null,
-    detailedAddress_id: null,
-    isBuy: null,
-    showCamera: false,
-    address: '',
-    room_id: null,
-    state: null
+
   }
 })

@@ -5,25 +5,72 @@
 <view class="login">
 	<form bindsubmit='register'>
 		<view class="item">
-			<input name="name" class="input fs" placeholder="请输入姓名" value="{{ username }}" bindblur='nameInput'/>
+			<input name="name" class="input fs" placeholder="请输入姓名" value="{{ username }}" bindblur='nameInput' />
 		</view>
 		<view class="item">
-			<input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" bindblur='passwordInput'/>
+			<input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" bindblur='passwordInput' />
 		</view>
 		<view class="item">
-			<input name="phone" class="input fs" placeholder="请输入手机号" value="{{ phone }}" bindblur='phoneInput'/>
-		</view>
-		<!-- <view class="item">
-			<input name="password" class="input fs" placeholder="请输入身份证号" type="password" value="{{ password }}" />
-		</view> -->
-        <view class="item">
-			<input name="number" class="input fs" placeholder="请输入工号" value="{{ number }}" bindblur='numberInput'/>
+			<input name="phone" class="input fs" placeholder="请输入手机号" value="{{ phone }}" bindblur='phoneInput' />
 		</view>
 		<view class="item">
-			<button class="btn fs" form-type='submit'>注册</button>
+			<input name="id_card" class="input fs" placeholder="请输入身份证号" bindblur='IDCardInput'  maxlength='18' />
 		</view>
+		<view class="item">
+			<input name="number" class="input fs" placeholder="请输入工号" value="{{ number }}" bindblur='numberInput' />
+		</view>
+		<view class="item">
+			<view class="face">
+				<picker bindchange="changeArea" value="{{index}}" range-key="name" range="{{areaList}}">
+					<button class="buuton" class="btn fs" style="font-size: 30rpx;">选择辖区</button>
+				</picker>
+				<input class="input fs" placeholder="辖区显示" value="{{ area ? area : areaList[area_index].name }}" disabled="true" />
+			</view>
+		</view>
+		<block wx:if="{{open_face}}">
+			<view class="item">
+				<view class="face">
+					<button class="btn fs" bindtap="cameraDisable">上传人脸</button>
+					<image mode="aspectFill" src="{{face_image}}" class="image"></image>
+				</view>
+			</view>
+		</block>
+		<!-- 注册 -->
+		<block wx:if="{{isLogin}}">
+			<view class="item">
+				<button class="btn fs" form-type='submit'>注册</button>
+			</view>
+		</block>
+		<block wx:else>
+			<view class="item">
+				<button class="btn fs" form-type='submit'>保存信息</button>
+			</view>
+		</block>
 	</form>
-    <view class="href">
-        <view bindtap="toLogin">直接登录</view>
-    </view>
+	<block wx:if="{{isLogin}}">
+		<view class="href">
+			<view bindtap="toLogin">直接登录</view>
+		</view>
+	</block>
 </view>
+
+<!-- 相机 -->
+<camera wx:if="{{showCamera}}" device-position="{{cameraConfig.position}}" flash="{{cameraConfig.flash}}" bindstop="cameraStop" binderror="cameraError" class="cameraBox">
+	<cover-view class="viewBox">
+		<cover-view style='background-color: #fff;flex:1;'></cover-view>
+		<cover-view class="content">
+			<cover-image mode='widthFix' class="faceImg" src="/icon/face.png" />
+			<cover-view class="circle"></cover-view>
+		</cover-view>
+		<cover-view style='background-color: #fff;flex:1;'></cover-view>
+	</cover-view>
+
+	<cover-view class="cameraTab">
+		<cover-image class="tabImg" src="/icon/{{cameraConfig.flash}}.png" bindtap='flashChange'></cover-image>
+		<cover-image class="tabImg" src="/icon/switch.png" bindtap='positionChange'></cover-image>
+		<cover-view bindtap='cameraDisable'>取消</cover-view>
+	</cover-view>
+	<cover-view class="photographBtn" bindtap='takePhoto'>
+		<cover-image class="cameraImg" src="/icon/camera.png"></cover-image>
+	</cover-view>
+</camera>
