@@ -5,33 +5,25 @@
 <view class="login">
 	<form bindsubmit='register'>
 		<view class="item">
-			<input name="name" class="input fs" placeholder="请输入姓名" value="{{ username }}" bindblur='nameInput' />
+			<input name="name" class="input fs" placeholder="请输入姓名" value="{{ username }}" bindblur='nameInput'/>
 		</view>
 		<view class="item">
-			<input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" bindblur='passwordInput' />
+			<input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" bindblur='passwordInput'/>
 		</view>
 		<view class="item">
-			<input name="phone" class="input fs" placeholder="请输入手机号" value="{{ phone }}" bindblur='phoneInput' />
+			<input name="phone" class="input fs" placeholder="请输入手机号" value="{{ phone }}" bindblur='phoneInput'/>
 		</view>
-		<view class="item">
+		<!-- <view class="item">
 			<input name="password" class="input fs" placeholder="请输入身份证号" type="password" value="{{ password }}" />
-		</view>
-		<view class="item">
-			<input name="number" class="input fs" placeholder="请输入工号" value="{{ number }}" bindblur='numberInput' />
-		</view>
-		<picker bindchange="accessChange" value="{{index}}" range-key="name" range="{{areaList}}">
-			<view class="item">
-				<input name="number" class="input fs" placeholder="请选择辖区" value="{{ number }}" bindblur='numberInput' disabled="true" />
-			</view>
-		</picker>
-		<view class="item">
-			<input name="number" class="input fs" placeholder="上传人脸" value="{{ number }}" bindblur='numberInput' />
+		</view> -->
+        <view class="item">
+			<input name="number" class="input fs" placeholder="请输入工号" value="{{ number }}" bindblur='numberInput'/>
 		</view>
 		<view class="item">
 			<button class="btn fs" form-type='submit'>注册</button>
 		</view>
 	</form>
-	<view class="href">
-		<view bindtap="toLogin">直接登录</view>
-	</view>
+    <view class="href">
+        <view bindtap="toLogin">直接登录</view>
+    </view>
 </view>
