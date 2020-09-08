@@ -1,11 +1,12 @@
 var api = require('../../api/index')
 
-var area = {}
+var info = {}
 
 // 获取辖区列表
-area.policeStations = function(page, limit) {
+info.information = function(token, page, limit) {
     return new Promise((resolve, reject) => {
-        api.get(api.url.PoliceStations, {
+        api.get(api.url.Information, {
+            token: token,
             page: page,
             limit: limit
         }, function (response) {
@@ -19,4 +20,4 @@ area.policeStations = function(page, limit) {
     })
 }
 
-module.exports = area;
+module.exports = info;

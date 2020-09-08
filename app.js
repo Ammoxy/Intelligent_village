@@ -1,14 +1,12 @@
 App({
   onShow: function () {
-    // this.getUserInfo();
-
-    var self = this;
-   
+    var global = require('./model/global');
     // 开关配置
-    var version = '1.0.11';
-    // global.configs(version).then(res => {
-    //   wx.setStorageSync('openFace', res.config_value);
-    // })
+    var switch_name = '人脸开关';
+    var version = '1.0.1';
+    global.configs(switch_name, version).then(res => {
+      wx.setStorageSync('openFace', res.data.switch_value)
+    })
   },
   onLaunch: function () {
     let self = this;
@@ -73,6 +71,6 @@ App({
 
 
   globalData: {
-
+    userInfo: null
   }
 })

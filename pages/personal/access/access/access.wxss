@@ -28,13 +28,13 @@ page {
   display: block;
   padding: 4rpx 20rpx 0;
 }
-
+/* 
 .renter_box {
   position: absolute;
   top: 80rpx;
   left: 0;
   right: 0;
-}
+} */
 .renter_box .address {
   display: flex;
   justify-content: space-between;

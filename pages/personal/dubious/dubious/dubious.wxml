@@ -1,16 +1,6 @@
-<view class="renter">
-	<view bindtap="toDubiousInfo">可疑人脸信息</view>
-	<view bindtap="toCapture">查看抓拍记录</view>
-</view>
-<view class="renter">
-	<view bindtap="toDubiousInfo">可疑人脸信息</view>
-	<view bindtap="toCapture">查看抓拍记录</view>
-</view>
-<view class="renter">
-	<view bindtap="toDubiousInfo">可疑人脸信息</view>
-	<view bindtap="toCapture">查看抓拍记录</view>
-</view>
-
-<view wx:if="{{showFoot}}" class="foot">
-	<text>没有更多数据了~ ╮（╯＿╰）╭</text>
-</view>
+<block wx:for="{{dangerFaceList}}" wx:key>
+	<view class="renter">
+		<view bindtap="toDubiousInfo">{{item.name}}</view>
+		<view bindtap="toCapture" data-id="{{item.danger_id}}">查看抓拍记录</view>
+	</view>
+</block>

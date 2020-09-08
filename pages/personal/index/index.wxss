@@ -44,6 +44,14 @@
     width: 30%;
 }
 
+.user_img .avator {
+    width: 180rpx;
+    height: 180rpx;
+    margin: 20rpx;
+    border: 1rpx solid #fff;
+    border-radius: 10rpx;
+}
+
 .nickname {
     color: #fff;
 }
@@ -52,7 +60,7 @@
     width: 100rpx;
     height: 100rpx;
     margin: 20rpx;
-    border: 2rpx solid #fff;
+    border: 1rpx solid #fff;
     border-radius: 50%;
 }
 

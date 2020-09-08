@@ -1,10 +1,12 @@
-<view class="search">
+<!-- <view class="search">
 	<input placeholder="请输入设备号"></input>
 	<image src="../../../../icon/search.png"></image>
-</view>
-<view class="renter_box">
-	<view class="address" bindtap="toDevice">
-		<text>设备一</text>
-		<image src="/icon/right.png"></image>
+</view> -->
+<block wx:for="{{deviceList}}" wx:key="index">
+	<view class="renter_box">
+		<view class="address" bindtap="toDevice" data-addressid="{{item.address_id}}">
+			<text>{{item.address.address}}</text>
+			<image src="/icon/right.png"></image>
+		</view>
 	</view>
-</view>
+</block>

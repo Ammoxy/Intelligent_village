@@ -1,4 +1,5 @@
-var app = getApp();
+let user = require('../../../model/user/user')
+let app = getApp();
 
 Page({
 
@@ -6,9 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name: '',
-    number: '',
-    wxInfo: null,
+    userInfo: null,
     areaList: [{
       name: '辖区一',
       title: 1
@@ -22,28 +21,82 @@ Page({
       name: '辖区四',
       title: 1
     }],
-    area_id: ''
+    area_id: '',
+
+
+    open_face: true
   },
 
   onLoad: function (options) {
-    this.setData({
-      name: wx.getStorageSync('name'),
-      number: wx.getStorageSync('number')
-    })
+    this.getInfo();
+    if(wx.getStorageSync('openFace') == "2") {
+      this.setData({
+        open_face: false
+      })
+    }
   },
-  onShow() {},
+  onShow() {
+    this.getInfo();
+  },
+
+  // 获取个人信息
+  getInfo() {
+    let self = this;
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading'
+    })
+    if (wx.getStorageSync('token')) {
+      user.info(wx.getStorageSync('token')).then(res => {
+        app.globalData.userInfo = res.data;
+        self.setData({
+          userInfo: app.globalData.userInfo
+        })
+      })
+    }
+  },
+
   toLogin() {
     wx.navigateTo({
-      url: "/pages/register/index"
+      url: "/pages/login/index"
     });
   },
 
-  // 选择辖区
-  rentChange(e) {
-    console.log(e)
+  // 警员信息
+  toInfomation() {
     if (wx.getStorageSync('token')) {
       wx.navigateTo({
-        url: '../rent/rent/rent?area_id=' + e.detail.value,
+        url: "/pages/register/index"
+      });
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+
+  },
+
+  toDevice() {
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../access/access/access?station_id=' + app.globalData.userInfo.station_id,
+      });
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+  },
+
+  // 选择出租屋
+  toRent() {
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../rent/rent/rent?station_id=' + app.globalData.userInfo.station_id,
       })
     } else {
       wx.showToast({
@@ -54,10 +107,10 @@ Page({
     }
   },
   // 选择学校
-  schoolChange(e) {
+  toSchool(e) {
     if (wx.getStorageSync('token')) {
       wx.navigateTo({
-        url: '../school/school/school?area_id=' + e.detail.value,
+        url: '../school/school/school?station_id=' + + app.globalData.userInfo.station_id,
       });
     } else {
       wx.showToast({
@@ -85,7 +138,7 @@ Page({
   toDubious() {
     if (wx.getStorageSync('token')) {
       wx.navigateTo({
-        url: '../dubious/dubious/dubious'
+        url: '../dubious/dubious-capture/dubious-capture'
       })
     } else {
       wx.showToast({
@@ -95,4 +148,12 @@ Page({
       })
     }
   },
+
+  changeUser() {
+    wx.removeStorageSync('token');
+    app.globalData.userInfo = null;
+    wx.reLaunch({
+      url: '/pages/login/index',
+    })
+  }
 })

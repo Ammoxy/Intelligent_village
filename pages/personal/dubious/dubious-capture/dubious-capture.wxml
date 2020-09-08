@@ -1,28 +1,35 @@
-<scroll-view class="scroll-view_H" scroll-x="{{true}}">
-	<view class="table">
-		<view class="tr">
-			<view class="name">张三</view>
-			<view>
-				<image mode="aspectFill" src="/icon/cover_img.png"></image>
+	<!-- <view class="table">
+		<block wx:for="{{dangerFaceLogsList}}" wx:key="index">
+			<view class="tr">
+				<view class="td" >{{item.updated_at}}</view>
+				<view class="td">{{item.address}}</view>
+				<view class="td">{{item.score}}</view>
+				<image class="td" mode="aspectFill" src="{{image}}" bindtap="preview" data-image="{{item.image}}"></image>
 			</view>
-			<view>
-				<image mode="aspectFill" src="/icon/cover_img.png"></image>
+		</block>
+	</view>
+
+	<view class="noData" wx:if="{{dangerFaceLogsList.length == 0}}">暂无数据</view> -->
+
+	<view class="details">
+		<view class="table">
+			<view class="tr bg-w">
+				<view class="th" style="width:500rpx;">抓拍地址</view>
+				<view class="th" style="width:400rpx;">抓拍时间</view>
+				<view class="th" style="width:150rpx;">相似度</view>
+				<view class="th" style="width:200rpx;">人脸照片</view>
+				<view class="th" style="width:200rpx;">抓拍照片</view>
 			</view>
-			<view class="state">80.5</view>
-			<view class="address">中山</view>
-			<view class="time">2020-02-31 18:00:00</view>
-		</view>
-		<view class="tr">
-			<view class="name">张三</view>
-			<view>
-				<image mode="aspectFill" src="/icon/cover_img.png"></image>
+			<view class="bol">
+				<block wx:for="{{dangerFaceLogsList}}">
+					<view class="tr bg-g">
+						<view class="td" style="width:500rpx;">{{item.address}}</view>
+						<view class="td" style="width:400rpx;">{{item.updated_at}}</view>
+						<view class="td" style="width:150rpx;">{{item.score}}</view>
+						<view class="td" style="width:200rpx;">	<image mode="aspectFill" src="{{item.danger.href}}" bindtap="preview" data-image="{{item.danger.href}}"></image></view>
+						<view class="td" style="width:200rpx;">	<image mode="aspectFill" src="{{item.log.image}}" bindtap="catPreview" data-catimage="{{item.log.image}}"></image></view>
+					</view>
+				</block>
 			</view>
-			<view>
-				<image mode="aspectFill" src="/icon/cover_img.png"></image>
-			</view>
-			<view class="state">80.5</view>
-			<view class="address">中山</view>
-			<view class="time">2020-02-31 18:00:00</view>
 		</view>
 	</view>
-</scroll-view>

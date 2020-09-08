@@ -1,19 +1,104 @@
-.table .thead {
+.date {
   display: flex;
-  justify-content: space-between;
-}
-
-.table .tr {
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+
   padding: 10rpx;
   border-bottom: 2rpx solid #ccc;
 }
 
-.table .tr image {
+.date .input {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 10rpx;
+  border: 2rpx solid #378dbb;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+}
+
+.details {
+  width: 100vw;
+  height: 83vh;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.table {
+  position: relative;
+  border: 0px solid darkgray;
+}
+
+.tr {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  align-items: center;
+}
+
+
+
+.bg-w {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: snow;
+}
+
+.bg-g {
+  background: #378dbb;
+}
+
+.bol {
+  position: absolute;
+  left: 0;
+  top: 10vh;
+  height: 90vh;
+  overflow-x: auto;
+}
+
+.th {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  white-space: nowrap;
+  border: 2rpx solid #ccc;
+  /*文本不换行*/
+}
+
+.td {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  border: 2rpx solid #ccc;
+  color: #fff;
+  /* white-space: nowrap; */
+  /*文本不换行*/
+}
+
+.td image {
   width: 100rpx;
   height: 100rpx;
 }
 
+/* 分页 */
+.paging {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30rpx 5rpx;
+}
 
+.paging .page-item {
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 2rpx solid #378dbb;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.paging .input {
+  width: 150rpx;
+  padding-left: 10rpx;
+}

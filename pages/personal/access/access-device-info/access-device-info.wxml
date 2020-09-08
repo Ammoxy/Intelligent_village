@@ -1,0 +1,29 @@
+<view class="user">
+	<view class="item">
+		<text>地址</text>
+		<text class="info">{{deviceInfo.address.address}}</text>
+	</view>
+	<view class="item">
+		<text>设备号</text>
+		<text class="info">{{deviceInfo.uuid}}</text>
+	</view>
+	<view class="item">
+		<text>类型</text>
+		<text class="info">{{deviceInfo.type_string}}</text>
+	</view>
+	<view class="item">
+		<text>方向</text>
+		<text class="info">{{deviceInfo.in}}</text>
+		<text class="info" wx:if="{{deviceInfo.direction == 'in'}}">进</text>
+		<text class="info" wx:if="{{deviceInfo.direction == 'out'}}">出</text>
+	</view>
+	<view class="item">
+		<text>状态</text>
+		<text class="info" wx:if="{{deviceInfo.online == 0}}">离线</text>
+		<text class="info" wx:if="{{deviceInfo.online == 1}}">在线</text>
+	</view>
+	<view class="item">
+		<text>备注</text>
+		<text class="info">{{deviceInfo.remark}}</text>
+	</view>
+</view>

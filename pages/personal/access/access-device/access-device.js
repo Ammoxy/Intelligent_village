@@ -1,38 +1,42 @@
-// pages/personal/access/access-device/access-device.js
+let device = require('../../../../model/device/device') 
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    address_id: '',
+    deviceList: []
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad: function (opt) {
+    this.setData({
+      address_id: opt.address_id
+    });
+    this.getDevice();
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getDevice() {
+    let self = this;
+    device.stationDevice(wx.getStorageSync('token'), 1, 100, self.data.address_id).then(res => {
+     self.setData({
+      deviceList: res.data.data
+     })
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 查看设备信息
+  toDeviceInfo(e) {
+    wx.navigateTo({
+      url: '../access-device-info/access-device-info?uuid=' + e.currentTarget.dataset.uuid,
+    })
   },
+
   // 查看进出记录
-  toInOutLogs() {
+  toInOutLogs(e) {
     var self = this;
     wx.navigateTo({
-      url: '../access-device-inout/access-device-inout',
+      url: '../access-device-inout/access-device-inout?address_id=' + e.currentTarget.dataset.addressid,
     })
   },
   // 抓拍记录

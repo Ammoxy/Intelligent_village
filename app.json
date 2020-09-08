@@ -1,5 +1,6 @@
 {
   "pages": [
+
     "pages/personal/index/index",
 
     "pages/register/index",
@@ -19,7 +20,9 @@
     "pages/home/home",
     "pages/personal/access/access/access",
     "pages/personal/access/access-device/access-device",
+    "pages/personal/access/access-device-info/access-device-info",
     "pages/personal/access/access-device-inout/access-device-inout",
+
     "pages/personal/access/access-device-capture/access-device-capture",
     "pages/personal/dubious/dubious/dubious",
     "pages/personal/dubious/dubious-info/dubious-info",
@@ -31,22 +34,6 @@
     "navigationBarTitleText": "智能乡村",
     "navigationBarTextStyle": "white"
   },
-  "tabBar": {
-    "color": "#000",
-    "selectedColor": "#378dbb",
-    "list": [{
-        "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "/icon/home2.png",
-        "selectedIconPath": "/icon/home.png"
-      },
-      {
-        "pagePath": "pages/personal/index/index",
-        "text": "我的",
-        "iconPath": "/icon/my4.png",
-        "selectedIconPath": "/icon/my3.png"
-      }
-    ]
-  },
+ 
   "sitemapLocation": "sitemap.json"
 }

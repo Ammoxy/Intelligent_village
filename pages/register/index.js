@@ -1,5 +1,5 @@
 let api = require('../../model/area/area');
-let user = require('../../model/register/register');
+let user = require('../../model/user/user');
 let reg = require('../../utils/reg')
 const qiniuUploader = require('../../utils/qiniu');
 let app = getApp();
@@ -27,7 +27,7 @@ Page({
     phone: '',
     id_card: '',
     number: '',
-    face_image: 'https://tu.fengniaotuangou.cn/tmp_fce0223cd644085c0c5f56d98327176ed8358371f6721238.jpg', // 人脸图片
+    face_image: '', // 人脸图片
     station_id: '',
 
     areaList: '', // 获取辖区列表
@@ -38,11 +38,20 @@ Page({
       flash: 'off',
       position: 'front'
     },
+    showPWD: true,
+    numberDisabled: false, // 注册后工号不可修改
+    btnDisabled: false, // 注册后人脸不可修改
     isLogin: true, // 是否登录显示不同按钮
+    isSave: false, // 是否要修改
     open_face: true // 人脸开关显示
   },
 
   onLoad() {
+    if(wx.getStorageSync('openFace') == "2") {
+      this.setData({
+        open_face: false
+      })
+    }
     this.showCamera = false; //是否显示照相机
     this.cameraConfig = { //照相机参数配置
       flash: 'off',
@@ -53,7 +62,19 @@ Page({
   onShow() {
     if (wx.getStorageSync('token')) {
       this.setData({
-        isLogin: false
+        area: app.globalData.userInfo.station.name,
+        id: app.globalData.userInfo.id,
+        name: app.globalData.userInfo.name,
+        password: '',
+        phone: app.globalData.userInfo.phone,
+        id_card: app.globalData.userInfo.id_card,
+        number: app.globalData.userInfo.number,
+        face_image: app.globalData.userInfo.face_image,
+        station_id: app.globalData.userInfo.station_id,
+        isLogin: false,
+        numberDisabled: true,
+        btnDisabled: true,
+        showPWD: false
       })
     }
     if (this.data.face_image) {
@@ -66,42 +87,85 @@ Page({
     let self = this;
     api.policeStations(1, 1000).then(res => {
       self.setData({
-        areaList: res.data
+        areaList: res.data.data
       })
     })
   },
 
   changeArea(e) {
-      this.setData({
-        station_id: this.data.areaList[e.detail.value].id,
-        area_index: e.detail.value
-      });
+    this.setData({
+      station_id: this.data.areaList[e.detail.value].id,
+      area_index: e.detail.value,
+      isSave: true,
+      area: this.data.areaList[e.detail.value].name
+    });
   },
 
   nameInput(e) {
     this.data.name = e.detail.value;
   },
+  nameFocus() {
+    this.setData({
+      isSave: true
+    });
+  },
   passwordInput(e) {
     this.data.password = e.detail.value;
   },
+  passwordFocus() {
+    this.setData({
+      isSave: true
+    });
+  },
   phoneInput(e) {
-    this.data.phone = e.detail.value;
+    if (reg.phone(e.detail.value) == true) {
+      this.data.phone = e.detail.value;
+    } else {
+      wx.showToast({
+        title: '请输入正确的手机号',
+        icon: 'none',
+        duration: 2000
+      });
+    }
+  },
+  phoneFocus() {
+    this.setData({
+      isSave: true
+    });
   },
   IDCardInput(e) {
-    this.data.id_card = e.detail.value;
-    // reg.reg(this.data.id_card)
+    if (reg.IDCard(e.detail.value) == true) {
+      this.data.id_card = e.detail.value;
+    } else {
+      wx.showToast({
+        title: '请输入有效的身份证号码',
+        icon: 'none',
+        duration: 2000
+      });
+    }
+
+  },
+  IDCardFocus() {
+    this.setData({
+      isSave: true
+    });
   },
   numberInput(e) {
     this.data.number = e.detail.value;
   },
+  numberFocus() {
+    this.setData({
+      isSave: true
+    });
+  },
   register() {
     let self = this;
-    self.data.face_image = 'https://tu.fengniaotuangou.cn/tmp_fce0223cd644085c0c5f56d98327176ed8358371f6721238.jpg';
+    // self.data.face_image = 'https://tu.fengniaotuangou.cn/tmp_fce0223cd644085c0c5f56d98327176ed8358371f6721238.jpg';
     // 登录态为在线则是修改传id
     if (wx.getStorageSync('token')) {
       console.log('走修改');
-      if (self.data.name && self.data.password && self.data.phone && self.data.id_card && self.data.number && self.data.face_image && self.data.station_id) {
-        user.register(self.data.id, self.data.name, self.data.password, self.data.phone, self.data.face_image, self.data.id_card, self.data.number, self.data.station_id).then(res => {
+      if (self.data.name && self.data.phone && self.data.id_card && self.data.number && self.data.face_image && self.data.station_id) {
+        user.changeUser(wx.getStorageSync('token'), self.data.id, self.data.name, self.data.phone, self.data.face_image, self.data.id_card, self.data.number, self.data.station_id).then(res => {
           wx.showToast({
             title: '保存成功',
             icon: 'none',
@@ -123,26 +187,53 @@ Page({
     } else {
       // 新增注册
       console.log('走注册');
-      if (self.data.name && self.data.phone && self.data.id_card && self.data.number && self.data.face_image && self.data.station_id) {
+      if (self.data.open_face == true) {
+        if (self.data.name && self.data.phone && self.data.id_card && self.data.number && self.data.face_image && self.data.station_id) {
+          user.register(self.data.id, self.data.name, self.data.password, self.data.phone, self.data.face_image, self.data.id_card, self.data.number, self.data.station_id).then(res => {
+            self.setData({
+              numberDisabled: true,
+              btnDisabled: true,
+              showPWD: false
+            })
+            wx.showToast({
+              title: '注册成功',
+              icon: 'none',
+              success: (res) => {
+                setTimeout(() => {
+                  wx.reLaunch({
+                    url: '/pages/login/index',
+                  })
+                }, 2000)
+              }
+            })
+          })
+        } else {
+          wx.showToast({
+            title: '请补充完整信息',
+            icon: 'none'
+          })
+        }
+      } else {
         user.register(self.data.id, self.data.name, self.data.password, self.data.phone, self.data.face_image, self.data.id_card, self.data.number, self.data.station_id).then(res => {
+          self.setData({
+            numberDisabled: true,
+            btnDisabled: true,
+            showPWD: false
+          })
           wx.showToast({
             title: '注册成功',
             icon: 'none',
             success: (res) => {
               setTimeout(() => {
                 wx.reLaunch({
-                  url: '/pages/personal/index/index',
+                  url: '/pages/login/index',
                 })
               }, 2000)
             }
           })
         })
-      } else {
-        wx.showToast({
-          title: '请补充完整信息',
-          icon: 'none'
-        })
       }
+
     }
   },
 

@@ -2,16 +2,16 @@
 <!-- <view style="min-height: 92vh;"> -->
 <view>
 	<view class="box">
-		<view class="user_log" wx:if="{{name}}">
-			<view class="user_img">
-				<image class="avator" src="/icon/qb.png" style="border:8rpx solid #fff;"></image>
-
-				<!-- <image class="avator" src="{{wxInfo.avatarUrl}}" style="border:8rpx solid #fff;"></image> -->
-			</view>
+		<view class="user_log" wx:if="{{userInfo}}">
+			<block wx:if="{{open_face}}">
+				<view class="user_img">
+					<image mode="aspectFill" class="avator" src="{{userInfo.face_image}}" style="border:4rpx solid #fff;"></image>
+				</view>
+			</block>
 			<view class="user_content">
-				<view class="user_nickname">{{name}}</view>
-				<!-- <view class="user_nickname">工号: {{number}}</view> -->
-				<!-- <view class="user_nickname">辖区: 番禺</view> -->
+				<view class="user_nickname">姓名：{{userInfo.name}}</view>
+				<view class="user_nickname">工号: {{userInfo.number}}</view>
+				<view class="user_nickname">辖区：{{userInfo.station.name}}</view>
 			</view>
 		</view>
 		<view class="user" wx:else>
@@ -31,38 +31,41 @@
 				<image src="/icon/suspicious_face.png" />
 				<text>可疑人脸</text>
 			</view>
+			<view bindtap="changeUser">
+				<image src="/icon/close.png" />
+				<text>切换账号</text>
+			</view>
 		</view>
 	</view>
 
 	<view class="plate">
 		<view class="title">设备</view>
 		<view class="list">
-			<picker bindchange="accessChange" value="{{index}}" range-key="name" range="{{areaList}}">
-				<view>
-					<image src="/icon/rke.png" />
-					<text>门禁机</text>
-				</view>
-			</picker>
+			<!-- <picker bindchange="accessChange" value="{{index}}" range-key="name" range="{{areaList}}"> -->
+			<view bindtap="toDevice">
+				<image src="/icon/rke.png" />
+				<text>设备信息</text>
+			</view>
+			<!-- </picker> -->
 		</view>
 	</view>
-	<view class="plate">
+	<!-- <view class="plate">
 		<view class="title">地址信息</view>
 		<view class="list">
 			<picker bindchange="rentChange" value="{{index}}" range-key="name" range="{{areaList}}">
-				<view>
+				<view bindtap="toRent">
 					<image src="/icon/unit.png" />
 					<text>出租屋</text>
 				</view>
 			</picker>
 			<picker bindchange="schoolChange" value="{{index}}" range-key="name" range="{{areaList}}">
-				<view>
+				<view bindtap="toSchool">
 					<image src="/icon/school.png" />
 					<text>学校</text>
 				</view>
 			</picker>
-
 		</view>
-	</view>
+	</view> -->
 </view>
 
-<view class="supportText">智能乡村提供技术支持v1.0.0</view>
+<view class="supportText">智能乡村提供技术支持v1.0.1</view>

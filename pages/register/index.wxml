@@ -1,23 +1,32 @@
 <view class="logo">
 	<text>图巴诺智能乡村</text>
 </view>
-
+<block wx:if="{{isLogin}}">
+	<view class="href">
+		<view bindtap="toLogin">直接登录</view>
+	</view>
+</block>
 <view class="login">
+	<view class="ban" wx:if="{{isLogin == false && isSave}}">* 工号和人脸照片不可修改</view>
 	<form bindsubmit='register'>
 		<view class="item">
-			<input name="name" class="input fs" placeholder="请输入姓名" value="{{ username }}" bindblur='nameInput' />
+			<input name="name" class="input fs" placeholder="请输入姓名" value="{{ name }}" bindblur='nameInput' bindfocus="nameFocus" />
 		</view>
+		<block wx:if="{{showPWD}}">
+			<view class="item">
+				<input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" bindblur='passwordInput' bindfocus="passwordFocus" />
+			</view>
+		</block>
 		<view class="item">
-			<input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" bindblur='passwordInput' />
+			<input name="phone" class="input fs" placeholder="请输入手机号" value="{{ phone }}" bindblur='phoneInput' bindfocus="phoneFocus" />
 		</view>
+		<block wx:if="{{open_face}}">
+			<view class="item">
+				<input name="id_card" class="input fs" placeholder="请输入身份证号" value="{{ id_card }}" bindblur='IDCardInput' maxlength='18' bindfocus="IDCardFocus" />
+			</view>
+		</block>
 		<view class="item">
-			<input name="phone" class="input fs" placeholder="请输入手机号" value="{{ phone }}" bindblur='phoneInput' />
-		</view>
-		<view class="item">
-			<input name="id_card" class="input fs" placeholder="请输入身份证号" bindblur='IDCardInput'  maxlength='18' />
-		</view>
-		<view class="item">
-			<input name="number" class="input fs" placeholder="请输入工号" value="{{ number }}" bindblur='numberInput' />
+			<input name="number" class="input fs" placeholder="请输入工号" value="{{ number }}" bindblur='numberInput' bindfocus="numberFocus" disabled="{{numberDisabled}}" />
 		</view>
 		<view class="item">
 			<view class="face">
@@ -30,7 +39,7 @@
 		<block wx:if="{{open_face}}">
 			<view class="item">
 				<view class="face">
-					<button class="btn fs" bindtap="cameraDisable">上传人脸</button>
+					<button class="btn fs" bindtap="cameraDisable" disabled="{{btnDisabled}}">上传人脸</button>
 					<image mode="aspectFill" src="{{face_image}}" class="image"></image>
 				</view>
 			</view>
@@ -42,16 +51,12 @@
 			</view>
 		</block>
 		<block wx:else>
-			<view class="item">
+			<view class="item" wx:if="{{isSave}}">
 				<button class="btn fs" form-type='submit'>保存信息</button>
 			</view>
 		</block>
 	</form>
-	<block wx:if="{{isLogin}}">
-		<view class="href">
-			<view bindtap="toLogin">直接登录</view>
-		</view>
-	</block>
+
 </view>
 
 <!-- 相机 -->

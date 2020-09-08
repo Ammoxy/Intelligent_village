@@ -1,12 +1,12 @@
 
-
+let info = require('../../model/information/information')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    information: []
   },
 
   /**
@@ -16,7 +16,15 @@ Page({
     
   },
   onShow: function () {
-
+    this.getInformation();
+  },
+  // 获取资讯
+  getInformation() {
+    // let self = this;
+    // info.information(wx.getStorageSync('token'), 1, 10).then(res => {
+    //   self.setData({
+    //     information: res.data.data
+    //   })
+    // })
   }
-
 })

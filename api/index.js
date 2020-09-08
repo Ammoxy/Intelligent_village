@@ -1,18 +1,19 @@
 const tools = require("../utils/tools.js");
 const url = require("./url.js");
+const app = getApp();
 // const baseUrl = require("./baseUrl.js");
 
 function api() {
   var api = __wxConfig.envVersion;
   switch (api) {
     case 'develop': // 开发服
-      return 'http://192.168.0.106/FaceCore/public/api';
+      return 'https://api.fengniaotuangou.cn/api';
       break;
     case 'trial': // 体验服
-      return 'http://192.168.0.106/FaceCore/public/api';
+      return 'https://api.fengniaotuangou.cn/api';
       break;
     default: // 正式服
-      return 'https://wsa.pofiapp.com';
+      return 'https://api.fengniaotuangou.cn/api';
   }
 }
 
@@ -43,43 +44,29 @@ function get(url, data, cb) {
     method: 'get',
     header: header,
     success: function (res) {
-      if (res.statusCode === 200) {
-        if(res.data.code == 10001) {
+      switch (res.statusCode) {
+        case 200:
+          wx.hideToast();
+          tools.isFunction(cb) && cb(res.data);
+          break;
+        case 401:
           wx.showToast({
             icon: "none",
             title: '请重新登录'
           });
-          wx.removeStorageSync('wxInfo')
-          wx.removeStorageSync('token')
-          wx.switchTab({
-            url: "/pages/personal/index/index"
+          wx.removeStorageSync('token');
+          app.globalData.userInfo = null;
+
+          wx.navigateTo({
+            url: '/pages/login/index?scp=1',
           });
-        }
-        if(res.data.code == 10002) {
+          break;
+        default:
+          wx.hideToast();
           wx.showToast({
             icon: "none",
-            title: res.data.toast
+            title: res.data.msg
           });
-        }
-        if(res.data.code == 10003) {
-          wx.showToast({
-            icon: "none",
-            title: res.data.toast
-          });
-        }
-        if(res.data.code == 10004) {
-          wx.showToast({
-            icon: "none",
-            title: res.data.toast
-          });
-        }
-        if(res.data.code == 10005) {
-          wx.showToast({
-            icon: "none",
-            title: res.data.toast
-          });
-        }
-        tools.isFunction(cb) && cb(res.data);
       }
     },
     fail(res) {
@@ -99,43 +86,31 @@ function post(url, data, cb) {
     data: data,
     header: header,
     success: function (res) {
-      if (res.statusCode === 200) {
-        if(res.data.code == 10001) {
+      switch (res.statusCode) {
+        case 200:
+          wx.hideToast();
+
+          tools.isFunction(cb) && cb(res.data);
+          break;
+        case 401:
           wx.showToast({
             icon: "none",
             title: '请重新登录'
           });
-          wx.removeStorageSync('wxInfo')
-          wx.removeStorageSync('token')
-          wx.switchTab({
-            url: "/pages/personal/index/index"
+          wx.removeStorageSync('token');
+          app.globalData.userInfo = null;
+
+          wx.navigateTo({
+            url: '/pages/login/index?scp=1',
           });
-        }
-        if(res.data.code == 10002) {
+          break;
+        default:
+          wx.hideToast();
+
           wx.showToast({
             icon: "none",
-            title: res.data.toast
+            title: res.data.msg
           });
-        }
-        if(res.data.code == 10003) {
-          wx.showToast({
-            icon: "none",
-            title: res.data.toast
-          });
-        }
-        if(res.data.code == 10004) {
-          wx.showToast({
-            icon: "none",
-            title: res.data.toast
-          });
-        }
-        if(res.data.code == 10005) {
-          wx.showToast({
-            icon: "none",
-            title: res.data.toast
-          });
-        }
-        tools.isFunction(cb) && cb(res.data);
       }
     },
     fail(res) {
@@ -153,43 +128,30 @@ function del(url, data, cb) {
     method: 'delete',
     header: header,
     success: function (res) {
-      if (res.statusCode === 200) {
-        if(res.data.code == 10001) {
+      switch (res.statusCode) {
+        case 200:
+          wx.hideToast();
+
+          tools.isFunction(cb) && cb(res.data);
+          break;
+        case 401:
           wx.showToast({
             icon: "none",
             title: '请重新登录'
           });
-          wx.removeStorageSync('wxInfo')
-          wx.removeStorageSync('token')
-          wx.switchTab({
-            url: "/pages/personal/index/index"
+          wx.removeStorageSync('token');
+          app.globalData.userInfo = null;
+          wx.navigateTo({
+            url: '/pages/login/index?scp=1',
           });
-        }
-        if(res.data.code == 10002) {
+          break;
+        default:
+          wx.hideToast();
+
           wx.showToast({
             icon: "none",
-            title: res.data.toast
+            title: res.data.msg
           });
-        }
-        if(res.data.code == 10003) {
-          wx.showToast({
-            icon: "none",
-            title: res.data.toast
-          });
-        }
-        if(res.data.code == 10004) {
-          wx.showToast({
-            icon: "none",
-            title: res.data.toast
-          });
-        }
-        if(res.data.code == 10005) {
-          wx.showToast({
-            icon: "none",
-            title: res.data.toast
-          });
-        }
-        tools.isFunction(cb) && cb(res.data);
       }
     },
     fail(res) {

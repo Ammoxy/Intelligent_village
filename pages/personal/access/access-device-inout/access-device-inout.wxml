@@ -1,75 +1,47 @@
-<view class="table">
-	<view class="tr">
-		<view class="state">张三</view>
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
+<!-- 选择时间 -->
+<view class="date">
+	<picker mode="multiSelector" value="{{startDateTime}}" bindchange="changeStartDateTime" range="{{startDateTimeArray}}">
+		<input class="input" placeholder="请选择开始日期" value="{{startTime}}" disabled="true"></input>
+	</picker>
+	<view>-</view>
+	<picker mode="multiSelector" value="{{endDateTime}}" bindchange="changeEndDateTime" range="{{endDateTimeArray}}">
+		<input class="input" placeholder="请选择结束日期" value="{{endTime}}" disabled="true"></input>
+	</picker>
+</view>
+
+<view class="details">
+	<view class="table">
+		<view class="tr bg-w">
+			<view class="th" style="width:400rpx;">时间</view>
+			<view class="th" style="width:400rpx;">照片</view>
+		</view>
+		<view class="bol">
+			<block wx:for="{{faceLogsList}}" wx:key="index">
+				<view class="tr bg-g">
+					<view class="td" style="width:400rpx;">{{item.updated_at}}</view>
+					<view class="td" style="width:400rpx;">
+						<image mode="aspectFill" src="{{item.image}}" bindtap="preview" data-image="{{item.image}}"></image>
+					</view>
+				</view>
+			</block>
+		</view>
 	</view>
 
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
 
-	<view class="tr">
-		<view class="time">2020-02-31 18:00:00</view>
-		<view class="state">进</view>
-		<image mode="aspectFill" src="/icon/cover_img.png"></image>
-	</view>
+</view>
+<!-- <view class="table">
+	<block wx:for="{{faceLogsList}}" wx:key="index">
+		<view class="tr">
+			<view class="time">{{item.updated_at}}</view>
+			<image mode="aspectFill" src="{{item.image}}" bindtap="preview" data-image="{{item.image}}"></image>
+		</view>
+	</block>
+	<view class="noData" wx:if="{{faceLogsList.length == 0}}">暂无数据</view>
+</view> -->
+
+<view class="paging">
+	<button class="page-item" bindtap="prePage" disabled="{{preBtn}}">上一页</button>
+	<view>{{page}}/{{total}}</view>
+	<button class="page-item" bindtap="nextPage" disabled="{{nextBtn}}">下一页</button>
+	<input class="page-item input" value="{{inpPage}}" placeholder="前往的页数" bindblur="toPage"></input>
 </view>

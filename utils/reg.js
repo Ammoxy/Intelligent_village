@@ -1,7 +1,7 @@
 let reg = {};
 
-
-reg.reg = function(idCard) {
+// 验证身份证
+reg.IDCard = function(idCard) {
     var regIdCard =
         /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/;
     if (regIdCard.test(idCard)) {
@@ -44,6 +44,16 @@ reg.reg = function(idCard) {
             icon: "none",
             title: '请输入有效的身份证号码'
         })
+    }
+}
+
+// 验证手机号
+reg.phone = function (phone) {
+    let reg_phone = /^(\+)?(0|86|17951)?1(3\d|4[579]|5\d|6\d|7\d|8\d|9\d)\d{8}$/;
+    if (reg_phone.test(phone)) {
+        return true;
+    } else {
+        return false;
     }
 }
 

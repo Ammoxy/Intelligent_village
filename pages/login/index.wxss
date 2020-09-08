@@ -15,16 +15,16 @@
 }
 
 .login .item .input {
-    height: 70rpx;
-    line-height: 70rpx;
+    height: 80rpx;
+    line-height: 80rpx;
     border-radius: 20rpx;
     border: 2rpx solid #378dbb;
     text-align: center;
 }
 
 .login .item .btn {
-    height: 70rpx;
-    line-height: 70rpx;
+    height: 80rpx;
+    line-height: 80rpx;
     border-radius: 20rpx;
     border: 2rpx solid #378dbb;
 }
@@ -34,9 +34,14 @@
 }
 
 .href {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
     padding-top: 20rpx;
-    padding-right: 70rpx;
+    /* padding-right: 70rpx; */
     color: #378dbb;
+}
+
+.href view {
+    width: 300rpx;
 }
 

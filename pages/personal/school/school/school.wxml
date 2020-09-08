@@ -1,4 +1,7 @@
+<block wx:for="{{schoolList}}" wx:key="index">
 <view class="school" bindtap="toSchool">
-    <text>测试学校</text>
+    <text>{{item.address.address}}</text>
     <image src="/icon/right.png"></image>
 </view>
+</block>
+

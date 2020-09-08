@@ -1,4 +1,4 @@
-// pages/login/index.js
+let user = require('../../model/user/user')
 Page({
 
     /**
@@ -16,33 +16,37 @@ Page({
             })
         }
     },
-    nameInput(e) {
-        this.data.username = e.detail.value;
-    },
-    passwordInput(e) {
-        this.data.password = e.detail.value
-    },
+
     login(e) {
         var self = this;
-        console.log(e)
-        //跳转首页
-        if (self.data.scp) {
-            wx.navigateBack({
-                delta: self.data.scp
+        this.setData({
+            username: e.detail.value.username,
+            password: e.detail.value.password
+        })
+        wx.showToast({
+            title: '请求中',
+            icon: 'loading'
+        })
+        if (self.data.username) {
+            user.login(self.data.username, self.data.password).then(res => {
+                // 存储token
+                wx.setStorageSync('token', res.data);
+                //跳转首页
+                if (self.data.scp) {
+                    wx.navigateBack({
+                        delta: self.data.scp
+                    })
+                } else {
+                    wx.reLaunch({
+                        url: "/pages/personal/index/index"
+                    })
+                }
             })
         } else {
-            if (this.data.username && this.data.password) {
-                wx.setStorageSync('name', this.data.username);
-                wx.setStorageSync('number', this.data.username)
-                wx.reLaunch({
-                    url: "/pages/personal/index/index"
-                })
-            } else {
-                wx.showToast({
-                    title: '请填写信息',
-                    icon: 'none'
-                })
-            }
+            wx.showToast({
+                title: '请填写信息',
+                icon: 'none'
+            })
         }
     },
 

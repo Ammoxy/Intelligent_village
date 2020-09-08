@@ -1,12 +1,6 @@
-<view class="renter">
-	<view bindtap="toCapture">查看抓拍记录</view>
-	<view bindtap="toInOutLogs">查看进出记录</view>
-</view>
-<view class="renter">
-	<view bindtap="toCapture">查看抓拍记录</view>
-	<view bindtap="toInOutLogs">查看进出记录</view>
-</view>
-<view class="renter">
-	<view bindtap="toCapture">查看抓拍记录</view>
-	<view bindtap="toInOutLogs">查看进出记录</view>
-</view>
+<block wx:for="{{deviceList}}" wx:key="index">
+	<view class="renter">
+		<view bindtap="toDeviceInfo" data-uuid="{{item.uuid}}">{{item.uuid}}</view>
+		<view bindtap="toInOutLogs" data-addressid="{{item.address_id}}">查看进出/抓拍记录</view>
+	</view>
+</block>

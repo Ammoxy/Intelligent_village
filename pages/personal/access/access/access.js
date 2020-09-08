@@ -1,15 +1,32 @@
-// pages/personal/rent/rent/rent.js
+let address = require('../../../../model/address/address')
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    station_id: '',
   },
-  toDevice() {
-      wx.navigateTo({
-        url: '../access-device/access-device',
+  onLoad(opt) {
+    this.setData({
+      station_id: opt.station_id
+    });
+    this.getDevices();
+  },
+
+  // onShow() {
+  //   this.getDevices();
+  // },
+
+  getDevices() {
+    let self = this;
+    address.stationRelations(wx.getStorageSync('token'), self.data.station_id, '').then(res => {
+      self.setData({
+        deviceList: res.data.data
       })
+    })
+  },
+  toDevice(e) {
+    console.log(e)
+    wx.navigateTo({
+      url: '../access-device/access-device?address_id=' + e.currentTarget.dataset.addressid,
+    })
   }
 })
