@@ -7,7 +7,8 @@ function api() {
   var api = __wxConfig.envVersion;
   switch (api) {
     case 'develop': // 开发服
-      return 'http://192.168.0.111/FaceCore/public/api';
+      // return 'http://192.168.0.111/FaceCore/public/api';
+      return 'https://api.fengniaotuangou.cn/api';
       break;
     case 'trial': // 体验服
       return 'https://api.fengniaotuangou.cn/api';

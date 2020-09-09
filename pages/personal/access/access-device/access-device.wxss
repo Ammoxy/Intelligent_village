@@ -3,7 +3,7 @@
   justify-content: space-between;
   border-bottom: 2rpx solid #ccc;
   padding: 10rpx;
-  font-size: 36rpx;
+  font-size: 32rpx;
 
 }
 

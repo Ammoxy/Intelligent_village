@@ -9,36 +9,25 @@
 	</picker>
 </view>
 
-<view class="details">
-	<view class="table">
-		<view class="tr bg-w">
-			<view class="th" style="width:400rpx;">时间</view>
-			<view class="th" style="width:400rpx;">照片</view>
-		</view>
-		<view class="bol">
-			<block wx:for="{{faceLogsList}}" wx:key="index">
-				<view class="tr bg-g">
-					<view class="td" style="width:400rpx;">{{item.updated_at}}</view>
-					<view class="td" style="width:400rpx;">
-						<image mode="aspectFill" src="{{item.image}}" bindtap="preview" data-image="{{item.image}}"></image>
-					</view>
-				</view>
-			</block>
-		</view>
+<view class="table">
+	<view class="tr">
+		<view class="th" style="width:400rpx;">时间</view>
+		<view class="th" style="width:400rpx;">照片</view>
 	</view>
-
-
+	<view class="detail">
+		<block wx:for="{{faceLogsList}}" wx:key="index">
+			<view class="tr bg">
+				<view class="td" style="width:400rpx;">{{item.updated_at}}</view>
+				<view class="td" style="width:400rpx;">
+					<image mode="aspectFill" src="{{item.image}}" bindtap="preview" data-image="{{item.image}}"></image>
+				</view>
+			</view>
+		</block>
+		<view class="noData" wx:if="{{faceLogsList.length == 0}}">暂无数据</view>
+	</view>
 </view>
-<!-- <view class="table">
-	<block wx:for="{{faceLogsList}}" wx:key="index">
-		<view class="tr">
-			<view class="time">{{item.updated_at}}</view>
-			<image mode="aspectFill" src="{{item.image}}" bindtap="preview" data-image="{{item.image}}"></image>
-		</view>
-	</block>
-	<view class="noData" wx:if="{{faceLogsList.length == 0}}">暂无数据</view>
-</view> -->
 
+<!-- 分页 -->
 <view class="paging">
 	<button class="page-item" bindtap="prePage" disabled="{{preBtn}}">上一页</button>
 	<view>{{page}}/{{total}}</view>

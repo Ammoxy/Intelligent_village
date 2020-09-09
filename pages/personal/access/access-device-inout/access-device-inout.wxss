@@ -16,67 +16,42 @@
   font-size: 30rpx;
 }
 
-.details {
-  width: 100vw;
-  height: 80vh;
-  overflow-y: auto;
-  background-color: #fff;
-  font-size: 36rpx;
-
-}
-
 .table {
-  position: relative;
-  border: 0px solid darkgray;
+  width: 100vw;
+  height: 83vh;
+  font-size: 36rpx;
+  /* overflow-y: auto; */
 }
 
-.tr {
+.table .tr {
   display: flex;
   justify-content: center;
-  height: 10vh;
   align-items: center;
+  height: 10vh;
 }
 
-
-
-.bg-w {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: snow;
+.detail {
+  height: 73vh;
+  overflow-y: auto;
 }
 
-.bg-g {
-  background: #378dbb;
-}
-
-.bol {
-  position: absolute;
-  left: 0;
-  top: 10vh;
-  height: 90vh;
-  overflow-x: auto;
-}
-
-.th {
+.table .tr .th,
+.table .tr .td {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 10vh;
   white-space: nowrap;
   border: 2rpx solid #ccc;
-  /*文本不换行*/
 }
 
-.td {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-  border: 2rpx solid #ccc;
+.table .tr .td {
   color: #fff;
-  /* white-space: nowrap; */
-  /*文本不换行*/
+}
+
+.table .bg {
+  height: 10vh;
+  background: #378dbb;
 }
 
 .td image {

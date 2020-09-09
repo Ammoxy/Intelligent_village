@@ -94,14 +94,15 @@ Page({
 
   getDevice() {
     let self = this;
-    device.faceLogs(wx.getStorageSync('token'), 1, 9, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
-      // device.faceLogs(wx.getStorageSync('token'), 1, 8, 165, '2019-01-01 00:00:00', '2020-09-08 00:00:00').then(res => {
+    device.faceLogs(wx.getStorageSync('token'), 1, 10, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
       self.setData({
         faceLogsList: res.data.data,
         total: parseInt(res.data.total / 10 + 1),
         page: 1,
         inpPage: 1
       })
+      self.banNext(self.data.total); // 判断下一页按钮使用与否
+      self.banPre(); // 页数为1上一页禁用
       res.data.data.forEach(item => {
         if (item.image) {
           self.data.images.push(item.image);
@@ -123,9 +124,7 @@ Page({
       icon: 'loading',
       duration: 10000
     })
-    device.faceLogs(wx.getStorageSync('token'), self.data.page, 9, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
-
-      // device.faceLogs(wx.getStorageSync('token'), self.data.page, 8, 165, '2019-01-01 00:00:00', '2020-09-08 00:00:00').then(res => {
+    device.faceLogs(wx.getStorageSync('token'), self.data.page, 10, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
       self.setData({
         faceLogsList: res.data.data,
         total: parseInt(res.data.total / 10 + 1),
@@ -158,20 +157,13 @@ Page({
       icon: 'loading',
       duration: 10000
     })
-    device.faceLogs(wx.getStorageSync('token'), self.data.page, 9, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
-      // device.faceLogs(wx.getStorageSync('token'), self.data.page, 8, 165, '2019-01-01 00:00:00', '2020-09-08 00:00:00').then(res => {
+    device.faceLogs(wx.getStorageSync('token'), self.data.page, 10, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
       self.setData({
         faceLogsList: res.data.data,
         total: parseInt(res.data.total / 10 + 1),
-
         inpPage: self.data.page
-
       })
-      if (self.data.page == self.data.total) {
-        self.setData({
-          nextBtn: true
-        })
-      }
+      self.banNext(self.data.total); // 判断下一页按钮使用与否
       res.data.data.forEach(item => {
         if (item.image) {
           self.data.images.push(item.image);
@@ -201,24 +193,18 @@ Page({
           preBtn: false
         })
       }
-      if(self.data.inpPage == self.data.total) {
+      if (self.data.inpPage == self.data.total) {
         self.setData({
           nextBtn: true
         })
       }
-      device.faceLogs(wx.getStorageSync('token'), self.data.inpPage, 9, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
-        // device.faceLogs(wx.getStorageSync('token'), self.data.page, 8, 165, '2019-01-01 00:00:00', '2020-09-08 00:00:00').then(res => {
+      device.faceLogs(wx.getStorageSync('token'), self.data.inpPage, 10, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
         self.setData({
           faceLogsList: res.data.data,
           total: parseInt(res.data.total / 10 + 1),
-
           page: self.data.inpPage
         })
-        if (self.data.page == res.data.total) {
-          self.setData({
-            nextBtn: true
-          })
-        }
+        self.banNext(self.data.total); // 判断上下一页按钮使用与否
         res.data.data.forEach(item => {
           if (item.image) {
             self.data.images.push(item.image);
@@ -230,6 +216,34 @@ Page({
         title: '请输入1到' + self.data.total + '之间的页数',
         icon: 'none',
         duration: 2000
+      })
+    }
+  },
+
+  // 如果page 跟 total/10+1相等，下一页按钮就禁用
+  banNext(val) {
+    let self = this;
+    if (self.data.page == val) {
+      self.setData({
+        nextBtn: true
+      })
+    } else {
+      self.setData({
+        nextBtn: false
+      })
+    }
+  },
+
+  // 页数为1，上一页禁用
+  banPre(val) {
+    let self = this;
+    if (self.data.page == 1) {
+      self.setData({
+        preBtn: true
+      })
+    } else {
+      self.setData({
+        preBtn: false
       })
     }
   },
