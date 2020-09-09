@@ -38,6 +38,7 @@ page {
 .renter_box .address {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 2rpx solid #ccc;
   padding: 10rpx;
   font-size: 36rpx;

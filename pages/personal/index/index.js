@@ -32,7 +32,7 @@ Page({
     }
     // 开关配置
     var switch_name = '人脸开关';
-    var version = '1.0.3';
+    var version = '1.0.4';
     global.configs(switch_name, version).then(res => {
       wx.setStorageSync('openFace', res.data.switch_value == 1 ? true : false);
       this.setData({

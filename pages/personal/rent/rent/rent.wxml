@@ -1,13 +1,15 @@
-<view class="search">
+<!-- <view class="search">
 	<input placeholder="请输入地址"></input>
 	<image src="../../../../icon/search.png"></image>
-</view>
+</view> -->
 
 <view class="renter_box">
 	<block wx:for="{{rentAddressList}}" wx:key="index">
-		<view class="address" bindtap="toRenter">
-			<text>测试地址</text>
-			<image src="/icon/right.png"></image>
+		<view class="address">
+		<!-- <view class="address" bindtap="toRenter"> -->
+			<text>{{item.address.address}}</text>
+			<!-- <image src="/icon/right.png"></image> -->
 		</view>
 	</block>
+		<view class="noData" wx:if="{{rentAddressList.length == 0}}">暂无数据</view>
 </view>

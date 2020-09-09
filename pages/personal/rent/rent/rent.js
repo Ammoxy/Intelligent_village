@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+      rentAddressList: [],
       station_id: '',
     },
     onLoad(opt) {
@@ -17,7 +18,9 @@ Page({
     getRentAddress() {
       let self = this;
       address.stationRelations(wx.getStorageSync('token'), self.data.station_id, 'CZW').then(res => {
-        
+          self.setData({
+            rentAddressList: res.data.data
+          })
       })
     },
     toRenter() {

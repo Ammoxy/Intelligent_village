@@ -49,23 +49,23 @@
 			<!-- </picker> -->
 		</view>
 	</view>
-	<!-- <view class="plate">
+	<view class="plate">
 		<view class="title">地址信息</view>
 		<view class="list">
-			<picker bindchange="rentChange" value="{{index}}" range-key="name" range="{{areaList}}">
+			<!-- <picker bindchange="rentChange" value="{{index}}" range-key="name" range="{{areaList}}"> -->
 				<view bindtap="toRent">
 					<image src="/icon/unit.png" />
 					<text>出租屋</text>
 				</view>
-			</picker>
-			<picker bindchange="schoolChange" value="{{index}}" range-key="name" range="{{areaList}}">
-				<view bindtap="toSchool">
+			<!-- </picker> -->
+			<!-- <picker bindchange="schoolChange" value="{{index}}" range-key="name" range="{{areaList}}"> -->
+				<!-- <view bindtap="toSchool">
 					<image src="/icon/school.png" />
 					<text>学校</text>
-				</view>
-			</picker>
+				</view> -->
+			<!-- </picker> -->
 		</view>
-	</view> -->
+	</view>
 </view>
 
-<view class="supportText">智能乡村提供技术支持v1.0.3</view>
+<view class="supportText">智能乡村提供技术支持v1.0.4</view>

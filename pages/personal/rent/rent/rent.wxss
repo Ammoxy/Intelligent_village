@@ -2,7 +2,7 @@ page {
     position: relative;
 }
 
-.search {
+/* .search {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,11 +27,11 @@ page {
     height: 50rpx;
     display: block;
     padding: 4rpx 20rpx 0;
-}
+} */
 
 .renter_box {
     position: absolute;
-    top: 80rpx;
+    top: 0rpx;
     left: 0;
     right: 0;
 }
@@ -39,13 +39,14 @@ page {
 .renter_box .address {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 2rpx solid #ccc;
     padding: 10rpx;
 }
 
 .renter_box .address text {
     padding-left: 20rpx;
-    color: #378dbb;
+    color: #A9A9A9;
 }
 
 .renter_box .address image {
