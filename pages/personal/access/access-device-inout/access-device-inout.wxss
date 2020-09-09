@@ -18,9 +18,11 @@
 
 .details {
   width: 100vw;
-  height: 83vh;
+  height: 80vh;
   overflow-y: auto;
   background-color: #fff;
+  font-size: 36rpx;
+
 }
 
 .table {
@@ -88,6 +90,8 @@
   justify-content: space-around;
   align-items: center;
   margin: 30rpx 5rpx;
+  font-size: 36rpx;
+
 }
 
 .paging .page-item {

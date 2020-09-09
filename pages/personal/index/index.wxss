@@ -36,8 +36,9 @@
     align-items: center;
 }
 .user_nickname {
+    margin-bottom: 10rpx;
+    font-size: 36rpx;
     color: #fff;
-    margin-bottom: 10rpx
 }
 
 .user_img {

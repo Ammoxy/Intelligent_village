@@ -94,7 +94,7 @@ Page({
 
   getDevice() {
     let self = this;
-    device.faceLogs(wx.getStorageSync('token'), 1, 10, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
+    device.faceLogs(wx.getStorageSync('token'), 1, 9, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
       // device.faceLogs(wx.getStorageSync('token'), 1, 8, 165, '2019-01-01 00:00:00', '2020-09-08 00:00:00').then(res => {
       self.setData({
         faceLogsList: res.data.data,
@@ -123,7 +123,7 @@ Page({
       icon: 'loading',
       duration: 10000
     })
-    device.faceLogs(wx.getStorageSync('token'), self.data.page, 10, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
+    device.faceLogs(wx.getStorageSync('token'), self.data.page, 9, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
 
       // device.faceLogs(wx.getStorageSync('token'), self.data.page, 8, 165, '2019-01-01 00:00:00', '2020-09-08 00:00:00').then(res => {
       self.setData({
@@ -158,7 +158,7 @@ Page({
       icon: 'loading',
       duration: 10000
     })
-    device.faceLogs(wx.getStorageSync('token'), self.data.page, 10, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
+    device.faceLogs(wx.getStorageSync('token'), self.data.page, 9, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
       // device.faceLogs(wx.getStorageSync('token'), self.data.page, 8, 165, '2019-01-01 00:00:00', '2020-09-08 00:00:00').then(res => {
       self.setData({
         faceLogsList: res.data.data,
@@ -206,7 +206,7 @@ Page({
           nextBtn: true
         })
       }
-      device.faceLogs(wx.getStorageSync('token'), self.data.inpPage, 10, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
+      device.faceLogs(wx.getStorageSync('token'), self.data.inpPage, 9, self.data.address_id, self.data.startTime, self.data.endTime).then(res => {
         // device.faceLogs(wx.getStorageSync('token'), self.data.page, 8, 165, '2019-01-01 00:00:00', '2020-09-08 00:00:00').then(res => {
         self.setData({
           faceLogsList: res.data.data,

@@ -49,6 +49,8 @@
   white-space: nowrap;
   border: 2rpx solid #ccc;
   /*文本不换行*/
+  font-size: 36rpx;
+
 }
 
 .td {
@@ -61,6 +63,8 @@
   color: #fff;
   /* white-space: nowrap; */
   /*文本不换行*/
+  font-size: 36rpx;
+
 }
 
 .td image {

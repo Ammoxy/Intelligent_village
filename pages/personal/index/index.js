@@ -1,6 +1,10 @@
 let user = require('../../../model/user/user')
 let app = getApp();
 
+var global = require('../../../model/global');
+
+
+
 Page({
 
   /**
@@ -22,21 +26,27 @@ Page({
       title: 1
     }],
     area_id: '',
-
-
     open_face: true
   },
 
   onLoad: function (options) {
-    this.getInfo();
-    if(wx.getStorageSync('openFace') == "2") {
-      this.setData({
-        open_face: false
-      })
+    if (wx.getStorageSync('token')) {
+      this.getInfo();
     }
+    // 开关配置
+    var switch_name = '人脸开关';
+    var version = '1.0.1';
+    global.configs(switch_name, version).then(res => {
+      wx.setStorageSync('openFace', res.data.switch_value == 1 ? true : false);
+      this.setData({
+        open_face: wx.getStorageSync('openFace')
+      })
+    })
   },
   onShow() {
-    this.getInfo();
+    if (wx.getStorageSync('token')) {
+      this.getInfo();
+    }
   },
 
   // 获取个人信息
@@ -110,7 +120,7 @@ Page({
   toSchool(e) {
     if (wx.getStorageSync('token')) {
       wx.navigateTo({
-        url: '../school/school/school?station_id=' + + app.globalData.userInfo.station_id,
+        url: '../school/school/school?station_id=' + +app.globalData.userInfo.station_id,
       });
     } else {
       wx.showToast({

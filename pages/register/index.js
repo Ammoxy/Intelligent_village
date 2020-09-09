@@ -47,11 +47,9 @@ Page({
   },
 
   onLoad() {
-    if(wx.getStorageSync('openFace') == "2") {
-      this.setData({
-        open_face: false
-      })
-    }
+    this.setData({
+      open_face: wx.getStorageSync('openFace')
+    })
     this.showCamera = false; //是否显示照相机
     this.cameraConfig = { //照相机参数配置
       flash: 'off',
