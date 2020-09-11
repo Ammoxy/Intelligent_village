@@ -1,12 +1,4 @@
 /* pages/register/index.wxss */
-.logo {
-  margin-top: 10rpx;
-  margin-bottom: 30rpx;
-  text-align: center;
-  font-size: 50rpx;
-  color: #378dbb;
-}
-
 .login {
   margin-top: 20rpx;
 }
@@ -17,26 +9,6 @@
   font-size: 28rpx;
 }
 
-.login .item {
-  padding: 10rpx 50rpx;
-}
-
-.login .item .input {
-  height: 70rpx;
-  line-height: 70rpx;
-  border-radius: 20rpx;
-  border: 2rpx solid #378dbb;
-  text-align: center;
-}
-
-.login .item .btn {
-  height: 70rpx;
-  line-height: 70rpx;
-  border-radius: 20rpx;
-  border: 2rpx solid #378dbb;
-  background-color: #378dbb;
-  color: #fff;
-}
 
 /* 上传人脸 */
 .login .item .face {
@@ -50,10 +22,6 @@
   height: 300rpx;
   border: 2rpx solid #378dbb;
   border-radius: 10rpx;
-}
-
-.fs {
-  font-size: 40rpx;
 }
 
 .href {
