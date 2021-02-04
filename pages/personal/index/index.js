@@ -1,6 +1,9 @@
 let user = require('../../../model/user/user')
 let app = getApp();
-var global = require('../../../model/global');
+let global = require('../../../model/global');
+
+let alert = require('../../../model/alert/alert')
+
 
 Page({
 
@@ -29,10 +32,28 @@ Page({
   onLoad: function (options) {
     if (wx.getStorageSync('token')) {
       this.getInfo();
+
+      alert.getAlers(1, 10, 1).then(res => {
+        if (res.data.total == 0) {
+          wx.hideTabBarRedDot({
+            index: 0
+          })
+        } else if (res.data.total >= 1 && res.data.total <= 99) {
+          wx.setTabBarBadge({
+            index: 0,
+            text: res.data.total.toString()
+          })
+        } else {
+          wx.setTabBarBadge({
+            index: 0,
+            text: '99+'
+          })
+        }
+      })
     }
     // 开关配置
     var switch_name = '人脸开关';
-    var version = '1.0.4';
+    var version = '1.0.14';
     global.configs(switch_name, version).then(res => {
       wx.setStorageSync('openFace', res.data.switch_value == 1 ? true : false);
       this.setData({
@@ -41,9 +62,7 @@ Page({
     })
   },
   onShow() {
-    if (wx.getStorageSync('token')) {
-      this.getInfo();
-    }
+
   },
 
   // 获取个人信息

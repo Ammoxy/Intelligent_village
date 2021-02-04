@@ -1,0 +1,30 @@
+/* 对比照片 */
+.contrast {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+}
+
+.contrast-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-box {
+    position: relative;
+
+    height: 50vh;
+    border: #fff solid 1rpx;
+}
+
+.image-box image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}

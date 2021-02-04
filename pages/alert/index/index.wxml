@@ -1,0 +1,94 @@
+<!-- 转换时间戳 -->
+<wxs src="../../../utils/date.wxs" module="date" />
+<scroll-view scroll-y="true" style="background-color: #f0f0f0;">
+	<view class="box">
+		<block wx:for="{{alertList}}">
+			<view class="card">
+				<view class="info">
+					<image mode="aspectFill" src="{{item.danger.href}}"></image>
+					<view class="personal">
+						<text>{{item.danger.name}}</text>
+						<text>{{item.log.score}}</text>
+						<text>{{item.danger_type}}</text>
+						<text>{{item.alert_type}}</text>
+					</view>
+				</view>
+				<view>
+					<view class="time">
+						<text>{{date.anyuFormat(item.log.timestamp, 'yyyy-MM-dd hh:mm:ss')}}</text>
+					</view>
+					<view class="handle">
+						<view class="circle" wx:if="{{item.state == 1}}" bindtap="handle" data-id="{{item.id}}">未处理</view>
+						<view class="circle" wx:if="{{item.state == 2}}">已处理</view>
+						<view class="circle" bindtap="showDetail" data-dangerhref="{{item.danger.href}}" data-logimage="{{item.log.image}}" data-catchfaceimg="{{item.log.catch_faces[0].face_img}}" data-address="{{item.address.address}}">详情</view>
+						<view class="circle" bindtap="tocContrast" data-contrastlogimage="{{item.log.image}}" data-contrastdangerhref="{{item.danger.href}}">对比</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+</scroll-view>
+
+<!-- 分页 -->
+<block wx:if="{{showPage}}">
+	<view class="paging">
+		<button class="page-item" bindtap="prePage" disabled="{{preBtn}}">《</button>
+		<view>{{page}}/{{total}}</view>
+		<button class="page-item" bindtap="nextPage" disabled="{{nextBtn}}">》</button>
+		<input class="page-item input" value="{{inpPage}}" placeholder="前往的页数" bindblur="toPage"></input>
+		<button class="page-item" bindtap="refresh">刷新</button>
+	</view>
+</block>
+
+
+<!-- 查看详情 -->
+<view class="mark" wx:if="{{show_mark}}">
+	<view class="content">
+		<view class="close">
+			<image src="/icons/close.png" bindtap="close"></image>
+		</view>
+		<view class="detail">
+			<view class="column">
+				<text>人脸库照片</text>
+				<image mode="aspectFill" src="{{danger_href}}" bindtap="dangerHrefPreview"></image>
+			</view>
+			<view class="column">
+				<text>抓拍原图</text>
+				<block wx:if="{{log_image}}">
+					<image mode="widthFix" src="{{log_image}}" bindtap="preview"></image>
+				</block>
+				<block wx:else>
+					<view>暂无图片</view>
+				</block>
+			</view>
+			<view class="column">
+				<text>抓拍照片</text>
+				<block wx:if="{{catch_face_img}}">
+					<image mode="aspectFill" src="{{catch_face_img}}" bindtap="catchFaceImgPreview"></image>
+				</block>
+				<block wx:else>
+					<view>暂无图片</view>
+				</block>
+			</view>
+			<view class="column">
+				<text>出现地址</text>
+				<view style="margin-left:10rpx;">{{address}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 处理告警 -->
+<view class="mark" wx:if="{{handle_mark}}">
+	<view class="content">
+		<view class="close">
+			<image src="/icons/close.png" bindtap="closeHandle"></image>
+		</view>
+		<view class="form">
+			<form bindsubmit='handleAlert'>
+				<textarea value="{{remark}}" name="remark" placeholder="请输入备注" auto-height></textarea>
+				<button form-type='submit'>提交</button>
+			</form>
+		</view>
+	</view>
+</view>

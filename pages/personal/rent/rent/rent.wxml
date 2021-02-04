@@ -1,15 +1,27 @@
-<!-- <view class="search">
-	<input placeholder="请输入地址"></input>
-	<image src="../../../../icon/search.png"></image>
-</view> -->
+<view class="search">
+	<input placeholder="请输入地址" value="{{address_name}}" bindinput="addressNameBlur"></input>
+	<!-- <image src="../../../../icon/search.png" bindtap="search"></image> -->
+</view>
 
 <view class="renter_box">
 	<block wx:for="{{rentAddressList}}" wx:key="index">
-		<view class="address">
-		<!-- <view class="address" bindtap="toRenter"> -->
-			<text>{{item.address.address}}</text>
-			<!-- <image src="/icon/right.png"></image> -->
+		<view class="address" bindtap="viewMap" data-index="{{index}}" data-addressid="{{item.address.id}}">
+			<block wx:if="{{item.address.address}}">
+				<!-- <view class="address" bindtap="toRenter"> -->
+				<text>{{item.address.address}}</text>
+				<image src="{{ item.clickLocal == true ? '/icon/up2.png' : '/icon/right.png'}}"></image>
+			</block>
+			<block wx:else>
+				<text style="color: #ccc;">未获取到地址信息</text>
+			</block>
+		</view>
+		<view wx:if="{{item.clickLocal}}">
+			<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" show-location="ture" bindcontroltap="controltap" markers="{{markers}}" circles="{{circles}}" bindmarkertap="markertap" show-location style="width: 100%; height: 400rpx;">
+			</map>
+			<block wx:if="{{open_face && uuidList}}">
+			<button size="mini" bindtap="openDoor" style="color: #fff;background: #003366;">一键开门</button>
+			</block>
 		</view>
 	</block>
-		<view class="noData" wx:if="{{rentAddressList.length == 0}}">暂无数据</view>
+	<view class="noData" wx:if="{{rentAddressList.length == 0}}">暂无数据</view>
 </view>

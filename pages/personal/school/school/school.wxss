@@ -7,7 +7,7 @@
 
 .school text {
     padding-left: 20rpx;
-    color: #378dbb;
+    color: #003366;
 }
 
 .school image {

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "对比照片",
+  "usingComponents": {
+    "previewImg": "/component/previewImg/previewImg"
+  }
+}

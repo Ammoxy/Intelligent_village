@@ -1,0 +1,28 @@
+<view class="title">
+	<view>请填写要重置密码的手机号（该手机号必须为已注册手机号）</view>
+</view>
+
+<view class="forget">
+	<form bindsubmit='resetPwd'>
+		<form bindsubmit='getCode'>
+			<view class="item">
+				<input class="input fs" name="phone" value="{{ phone }}" placeholder="请输入手机号码"></input>
+			</view>
+            <view class="item code">
+				<input style="width: 350rpx" class="input fs" name="code" value="{{ code }}" placeholder="请填写验证码" bindfocus="codeFocus" />
+				<button class="button fs" disabled="{{ disBtn }}" form-type='submit'>
+					<text>{{ codeTxt }}</text>
+				</button>
+			</view>
+		</form>
+		<view class="item">
+			<input class="input fs" name="password" value="{{ password }}" placeholder="请输入新密码" type="password"></input>
+		</view>
+		<view class="item">
+			<input class="input fs" name="confirm_password" value="{{ confirm_password }}" placeholder="再次确认密码" type="password"></input>
+		</view>
+        <view class="item">
+			<button class="btn fs" form-type='submit'>提交</button>
+		</view>
+	</form>
+</view>

@@ -1,0 +1,100 @@
+<!-- 选择部门等级 -->
+<view class="item">
+	<input class="input" placeholder="请选择部门等级" value="{{level_title}}"></input>
+	<picker class="picker" bindchange="changeDepartmentLevel" value="{{index}}" range-key="title" range="{{departmentLevelList}}">
+		<button class="button">部门等级</button>
+	</picker>
+</view>
+
+
+<!-- 选择了一级部门 -->
+<block wx:if="{{level_name == 'first'}}">
+	<view class="item">
+		<input class="input" placeholder="请选择一级部门" value="{{first_title}}"></input>
+		<picker class="picker" bindchange="changeFirstDepartment" value="{{index}}" range-key="title" range="{{firstDepartmentList}}">
+			<button class="button">一级部门</button>
+		</picker>
+	</view>
+	<button class="submit" bindtap="confirm">确定</button>
+</block>
+
+
+<!-- 选择了二级部门 -->
+<block wx:if="{{level_name == 'second'}}">
+	<view class="item">
+		<input class="input" placeholder="请选择一级部门" value="{{first_title}}"></input>
+		<picker class="picker" bindchange="changeFirstDepartment" value="{{index}}" range-key="title" range="{{firstDepartmentList}}">
+			<button class="button">一级部门</button>
+		</picker>
+	</view>
+
+	<view class="item">
+		<input class="input" placeholder="请选择二级部门" value="{{second_title}}"></input>
+		<picker class="picker" bindchange="changeSecondDepartment" value="{{index}}" range-key="title" range="{{secondDepartmentList}}">
+			<button class="button" >二级部门</button>
+		</picker>
+	</view>
+	<button class="submit" bindtap="confirm">确定</button>
+
+
+</block>
+
+
+<!-- 选择了三级部门 -->
+<block wx:if="{{level_name == 'third'}}">
+	<view class="item">
+		<input class="input" placeholder="请选择一级部门" value="{{first_title}}"></input>
+		<picker class="picker" bindchange="changeFirstDepartment" value="{{index}}" range-key="title" range="{{firstDepartmentList}}">
+			<button class="button">一级部门</button>
+		</picker>
+	</view>
+
+	<view class="item">
+		<input class="input" placeholder="请选择二级部门" value="{{second_title}}"></input>
+		<picker class="picker" bindchange="changeSecondDepartment" value="{{index}}" range-key="title" range="{{secondDepartmentList}}">
+			<button class="button">二级部门</button>
+		</picker>
+	</view>
+
+	<view class="item">
+		<input class="input" placeholder="请选择三级部门" value="{{third_title}}"></input>
+		<picker class="picker" bindchange="changeThirdDepartment" value="{{index}}" range-key="title" range="{{thirdDepartmentList}}">
+			<button class="button">三级部门</button>
+		</picker>
+	</view>
+	<button class="submit" bindtap="confirm">确定</button>
+
+
+</block>
+
+<!-- 选择了四级部门 -->
+<block wx:if="{{level_name == 'fourth'}}">
+	<view class="item">
+		<input class="input" placeholder="请选择一级部门" value="{{first_title}}"></input>
+		<picker class="picker" bindchange="changeFirstDepartment" value="{{index}}" range-key="title" range="{{firstDepartmentList}}">
+			<button class="button">一级部门</button>
+		</picker>
+	</view>
+
+	<view class="item">
+		<input class="input" placeholder="请选择二级部门" value="{{second_title}}"></input>
+		<picker class="picker" bindchange="changeSecondDepartment" value="{{index}}" range-key="title" range="{{secondDepartmentList}}">
+			<button class="button">二级部门</button>
+		</picker>
+	</view>
+
+	<view class="item">
+		<input class="input" placeholder="请选择三级部门" value="{{third_title}}"></input>
+		<picker class="picker" bindchange="changeThirdDepartment" value="{{index}}" range-key="title" range="{{thirdDepartmentList}}">
+			<button class="button">三级部门</button>
+		</picker>
+	</view>
+
+	<view class="item">
+		<input class="input" placeholder="请选择四级部门" value="{{fourth_title}}"></input>
+		<picker class="picker" bindchange="changeFourthDepartment" value="{{index}}" range-key="title" range="{{fourthDepartmentList}}">
+			<button class="button">四级部门</button>
+		</picker>
+	</view>
+	<button class="submit" bindtap="confirm">确定</button>
+</block>

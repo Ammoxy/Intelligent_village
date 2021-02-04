@@ -1,0 +1,39 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx;
+}
+
+.item .input {
+    width: 73vw;
+    height: 70rpx;
+    line-height: 70rpx;
+    border: 2rpx solid #003366;
+    border-radius: 10rpx;
+    padding-left: 10rpx;
+    font-size: 26rpx;
+}
+
+.item .button {
+    height: 74rpx;
+    line-height: 74rpx;
+    border-radius: 10rpx;
+    border: 2rpx solid #003366;
+    background-color: #003366;
+    font-size: 26rpx;
+    color: #fff;
+}
+
+.submit {
+    height: 74rpx;
+    line-height: 74rpx;
+    margin: 10rpx;
+    border: 2rpx solid #003366;
+    background-color: #003366;
+    font-size: 26rpx;
+    color: #fff;
+}
+
+
+

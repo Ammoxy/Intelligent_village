@@ -1,18 +1,120 @@
+page {
+    background-color: #003366;
+}
+
+.title {
+    height: 10vh;
+    padding: 150rpx 0 150rpx 15rpx;
+    font-size: 50rpx;
+    color: #d6ecf0;
+}
+
+
 .login {
-    margin-top: 57.3rpx;
+    height: 80vh;
+    padding: 70rpx 30rpx 0 30rpx;
+    border-radius: 70rpx 70rpx 0 0;
+    background-color: #fff;
+}
+
+.login .item {
+    padding: 20rpx 50rpx;
+}
+
+.login .item .input {
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 50rpx;
+    border: 2rpx solid #003366;
+    text-align: center;
+}
+
+.login .item .btn {
+    height: 80rpx;
+    line-height: 80rpx;
+    border-radius: 50rpx;
+    border: 2rpx solid #003366;
+    background-color: #003366;
+    color: #fff;
+}
+
+.login .handle {
+    text-align: center;
+    padding: 20rpx 0;
+    font-size: 30rpx;
+    color: #003366;
+    text-decoration: underline;
+}
+
+.login .hr {
+    margin-top: 20rpx;
+    border: 1rpx solid #003366;
+}
+
+
+/* 登录类型 */
+/* .type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 57.3rpx 50rpx 0;
+    padding: 20rpx 0;
+    font-size: 36rpx;
+}
+
+.type view {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.login .code{
+   display: flex;
+   justify-content: space-between;
+}
+
+.login .code .button {
+    height: 70rpx;
+    line-height: 70rpx;
+    border-radius: 20rpx;
+    border: 2rpx solid #003366;
+    background-color: #003366;
+    color: #fff;
   }
 
 
 
 .href {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 20rpx;
-    /* padding-right: 70rpx; */
-    color: #378dbb;
+    margin: 20rpx 0;
+    text-align: center;
+    font-size: 26rpx;
+    color: #003366;
 }
 
 .href view {
-    width: 300rpx;
+    padding: 10rpx 0;
 }
 
+.active {
+    color: #003366;
+}
+.show{
+    display: block;   
+  }
+  
+  .hidden{
+    display: none;
+  }
+   */
+.active {
+    color: #003366;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,30 +1,80 @@
-
-let info = require('../../model/information/information')
+let app = getApp();
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-    information: []
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
     
   },
-  onShow: function () {
-    this.getInformation();
+
+  toDevice() {
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../personal/access/access/access?station_id=' + app.globalData.userInfo.station_id,
+      });
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
   },
-  // 获取资讯
-  getInformation() {
-    // let self = this;
-    // info.information(wx.getStorageSync('token'), 1, 10).then(res => {
-    //   self.setData({
-    //     information: res.data.data
-    //   })
-    // })
-  }
+
+  // 选择出租屋
+  toRent() {
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../personal/rent/rent/rent?station_id=' + app.globalData.userInfo.station_id,
+      })
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+  },
+  // 选择学校
+  toSchool(e) {
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../personal/school/school/school?station_id=' + +app.globalData.userInfo.station_id,
+      });
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+  },
+  // 选择门禁机
+  accessChange(e) {
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../personal/access/access/access?area_id=' + e.detail.value,
+      })
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+  },
+  // 可疑人脸
+  toDubious() {
+    if (wx.getStorageSync('token')) {
+      wx.navigateTo({
+        url: '../personal/dubious/dubious-capture/dubious-capture'
+      })
+    } else {
+      wx.showToast({
+        title: '请先登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+  },
+
+  
 })

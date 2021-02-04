@@ -1,57 +1,58 @@
 page {
-  position: relative;
+    position: relative;
+    font-size: 30rpx;
 }
 
 .search {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  padding: 10rpx 20rpx;
-  border-bottom: 2rpx solid #ccc;
-  background-color: #fff;
-  z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 10rpx 20rpx;
+    border-bottom: 2rpx solid #ccc;
+    background-color: #fff;
+    z-index: 10;
 }
 
 .search input {
-  border: 2rpx solid #378dbb;
-  font-size: 28rpx;
-  width: 618rpx;
-  border-radius: 27rpx;
-  padding: 4rpx 12rpx;
+    border: 2rpx solid #003366;
+    font-size: 28rpx;
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    border-radius: 27rpx;
+    padding: 4rpx 12rpx;
 }
 
 .search image {
-  width: 50rpx;
-  height: 50rpx;
-  display: block;
-  padding: 4rpx 20rpx 0;
+    width: 50rpx;
+    height: 50rpx;
+    display: block;
+    padding: 4rpx 20rpx 0;
 }
-/* 
-.renter_box {
-  position: absolute;
-  top: 80rpx;
-  left: 0;
-  right: 0;
-} */
-.renter_box .address {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2rpx solid #ccc;
-  padding: 10rpx;
-  font-size: 36rpx;
 
+.renter_box {
+    position: absolute;
+    top: 80rpx;
+    left: 0;
+    right: 0;
+}
+
+.renter_box .address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2rpx solid #ccc;
+    padding: 10rpx;
 }
 
 .renter_box .address text {
-  padding-left: 20rpx;
-  color: #378dbb;
+    padding-left: 20rpx;
+    color: #003366;
 }
 
 .renter_box .address image {
-  width: 40rpx;
-  height: 40rpx;
+    width: 40rpx;
+    height: 40rpx;
 }
-

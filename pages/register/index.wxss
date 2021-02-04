@@ -1,34 +1,62 @@
 /* pages/register/index.wxss */
-.login {
-  margin-top: 20rpx;
+page {
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #ece9e6, #ffffff);
 }
 
-.login .ban {
-  color: red;
-  padding: 0 50rpx;
-  font-size: 28rpx;
+.register {
+  color: #000000;
+  margin: 0 50rpx;
 }
 
-
-/* 上传人脸 */
-.login .item .face {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.item {
+  margin: 20rpx 0;
 }
 
-.login .item .face .image {
-  width: 400rpx;
-  height: 300rpx;
-  border: 2rpx solid #378dbb;
-  border-radius: 10rpx;
+.item input {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: 1rpx solid #d6ecf0;
+  border-radius: 20rpx;
+  background-color: #ffffff;
 }
 
+.item .btn {
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1rpx solid #d6ecf0;
+  border-radius: 20rpx;
+  background-color: #003366;
+  color: #ffffff;
+}
+
+.item .image {
+  width: 200rpx;
+  height: 200rpx;
+  border: none;
+
+}
+
+.image-center {
+  text-align: center;
+}
+
+.image-center button {
+  display: inline;
+  /* width: 200rpx; */
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+/* 直接登录 */
 .href {
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+  color: #003366;
   text-align: right;
-  /* padding-top: 20rpx; */
-  padding-right: 70rpx;
-  color: #378dbb;
+  text-decoration: underline;
 }
 
 

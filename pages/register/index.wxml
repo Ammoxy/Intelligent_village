@@ -1,16 +1,19 @@
-<view class="logo">
-	<text>图巴诺智能乡村</text>
-</view>
 <block wx:if="{{isLogin}}">
 	<view class="href">
 		<view bindtap="toLogin">直接登录</view>
 	</view>
 </block>
-<view class="login">
-	<view class="ban" wx:if="{{isLogin == false && isSave}}">* 工号和人脸照片不可修改</view>
+<view class="register">
 	<form bindsubmit='register'>
+		<block wx:if="{{open_face}}">
+			<view class="item image-center">
+			<button bindtap="cameraDisable" disabled="{{btnDisabled}}" plain="true">
+				<image mode="aspectFill" src="{{face_image ? face_image : '/icons/upload.png' }}" class="image" ></image>
+			</button>
+			</view>
+		</block>
 		<view class="item">
-			<input name="name" class="input fs" placeholder="请输入姓名" value="{{ name }}" bindblur='nameInput' bindfocus="nameFocus" />
+			<input name="name" class="input fs" placeholder="请输入姓名" value="{{ name }}" bindblur='nameInput' bindfocus="nameFocus"></input>
 		</view>
 		<block wx:if="{{showPWD}}">
 			<view class="item">
@@ -20,30 +23,22 @@
 		<view class="item">
 			<input name="phone" class="input fs" placeholder="请输入手机号" value="{{ phone }}" bindblur='phoneInput' bindfocus="phoneFocus" />
 		</view>
-		<block wx:if="{{open_face}}">
-			<view class="item">
-				<input name="id_card" class="input fs" placeholder="请输入身份证号" value="{{ id_card }}" bindblur='IDCardInput' maxlength='18' bindfocus="IDCardFocus" />
-			</view>
-		</block>
+		<view class="item">
+			<input name="id_card" class="input fs" placeholder="请输入身份证号" value="{{ id_card }}" bindblur='IDCardInput' maxlength='18' bindfocus="IDCardFocus" />
+		</view>
 		<view class="item">
 			<input name="number" class="input fs" placeholder="请输入工号" value="{{ number }}" bindblur='numberInput' bindfocus="numberFocus" disabled="{{numberDisabled}}" />
 		</view>
 		<view class="item">
-			<view class="face">
-				<picker bindchange="changeArea" value="{{index}}" range-key="name" range="{{areaList}}">
-					<button class="buuton" class="btn fs" style="font-size: 30rpx;">选择辖区</button>
-				</picker>
-				<input class="input fs" placeholder="辖区显示" value="{{ area ? area : areaList[area_index].name }}" disabled="true" />
-			</view>
+			<picker bindchange="changeArea" value="{{index}}" range-key="name" range="{{areaList}}">
+				<input class="input fs" placeholder="请点击选择辖区" value="{{ area ? area : areaList[area_index].name }}" disabled="true" />
+				<!-- <button class="buuton" class="btn fs" style="font-size: 30rpx;">选择辖区</button> -->
+			</picker>
 		</view>
-		<block wx:if="{{open_face}}">
-			<view class="item">
-				<view class="face">
-					<button class="btn fs" bindtap="cameraDisable" disabled="{{btnDisabled}}">上传人脸</button>
-					<image mode="aspectFill" src="{{face_image}}" class="image"></image>
-				</view>
-			</view>
-		</block>
+		<view class="item">
+			<input class="input fs" placeholder="请点击选择部门" value="{{ department}}" disabled="true" bindtap="toDepartment" />
+		</view>
+
 		<!-- 注册 -->
 		<block wx:if="{{isLogin}}">
 			<view class="item">
@@ -56,7 +51,7 @@
 			</view>
 		</block>
 	</form>
-
+	<view wx:if="{{open_face && isLogin == false && isSave}}">* 工号和人脸照片不可修改</view>
 </view>
 
 <!-- 相机 -->

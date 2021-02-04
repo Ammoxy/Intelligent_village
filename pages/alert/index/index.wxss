@@ -1,0 +1,172 @@
+page {
+    height: 90vh;
+}
+
+/* 遮罩 */
+.mark {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.mark .content {
+    position: relative;
+    height: 90vh;
+    margin: 50rpx;
+    padding: 0 50rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+}
+
+.mark .content .close {
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+}
+
+
+.mark .content .close image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.mark .content .detail {
+    position: absolute;
+    top: 60rpx;
+    /* margin: 50rpx; */
+}
+
+.mark .content .detail .column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    margin: 20rpx 0;
+    font-size: 26rpx;
+}
+
+.mark .content .detail .column image {
+    width: 30vw;
+    height: 20vh;
+}
+
+/* 处理 */
+.mark .content .form {
+    position: absolute;
+    top: 10vh;
+    width: 70vw;
+}
+
+.mark .content .form textarea {
+    width: 70vw;
+    padding: 10rpx;
+    border: 2rpx #ccc solid;
+    border-radius: 10rpx;
+}
+
+.mark .content .form button {
+    width: 73vw;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-top: 20rpx;
+    border-radius: 10rpx;
+
+    font-size: 26rpx;
+    background-color: #003366;
+    color: #fff;
+}
+
+/* 分页 */
+.paging {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    margin: 5rpx;
+    font-size: 36rpx;
+}
+
+.paging .page-item {
+    height: 60rpx;
+    line-height: 60rpx;
+    border: 2rpx solid #003366;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+}
+
+.paging .input {
+    width: 140rpx;
+    padding: 0 10rpx;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    height: 92vh;
+    background-color: #f0f0f0;
+
+}
+
+.card {
+    width: 46vw;
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+    padding: 5rpx;
+    border-radius: 20rpx;
+    background-color: #ffffff;
+    font-size: 26rpx;
+}
+
+.card .info {
+    display: flex;
+    
+}
+
+.card .personal {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rpx;
+    font-weight: 600;
+
+}
+
+.card .personal text {
+    margin-bottom: 20rpx;
+}
+
+.card image {
+    width: 30vw;
+    height: 20vh;
+    border-radius: 20rpx;
+}
+
+.card .time {
+    padding-top: 10rpx;
+    font-size: 30rpx;
+}
+
+.card .handle {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card .handle view {
+    margin: 10rpx;
+}
+
+.card .handle .circle {
+    width: 70rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #003366;
+    color: #ffffff;
+    font-size: 18rpx;
+}

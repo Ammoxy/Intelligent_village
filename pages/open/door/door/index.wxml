@@ -1,0 +1,43 @@
+<form bindsubmit="sumAddress">
+	<view class="form">
+		<view class="form-item">
+			<!-- <image class="left-icon" src="/icon/ID.png" /> -->
+			<text>省份</text>
+			<picker bindchange="ProChange" range="{{proList}}" range-key="title" value="{{index}}">
+				<input class="input" placeholder='请选择省份' disabled="true" name="province" value="{{province ? province : proList[is_pro].title}}"></input>
+			</picker>
+		</view>
+		<view class="form-item">
+			<!-- <image class="left-icon" src="/icon/ID.png" /> -->
+			<text>市级</text>
+			<picker bindchange="cityChange" range="{{cityList}}" range-key="title" value="{{index}}">
+				<input class="input" placeholder='请选择市级' disabled="true" name="city" value="{{city ? city : cityList[is_city].title}}"></input>
+			</picker>
+		</view>
+		<view class="form-item">
+			<!-- <image class="left-icon" src="/icon/ID.png" /> -->
+			<text>区级</text>
+			<picker bindchange="areaChange" range="{{areaList}}" range-key="title" value="{{index}}">
+				<input class="input" placeholder='请选择区级' disabled="true" name="area" value="{{area ? area : areaList[is_area].title}}"></input>
+			</picker>
+		</view>
+		<view class="form-item">
+			<!-- <image class="left-icon" src="/icon/ID.png" /> -->
+			<text>社区</text>
+			<picker bindchange="communityChange" range="{{communityList}}" range-key="title" value="{{index}}">
+				<input class="input" placeholder='请选择社区' disabled="true" name="community" value="{{community ? community : communityList[is_community].title}}"></input>
+			</picker>
+		</view>
+		<view class="form-item">
+			<!-- <image class="left-icon" src="/icon/ID.png" /> -->
+			<text>设备名</text>
+			<picker bindchange="communityChange" range="{{communityList}}" range-key="title" value="{{index}}">
+				<input class="input" placeholder='请选择设备名' disabled="true" name="community" value="{{community ? community : communityList[is_community].title}}"></input>
+			</picker>
+		</view>
+	</view>
+
+	<view class="sumbit">
+		<button class="submit" form-type='submit'>一键开门</button>
+	</view>
+</form>

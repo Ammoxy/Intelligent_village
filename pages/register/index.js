@@ -29,10 +29,13 @@ Page({
     number: '',
     face_image: '', // 人脸图片
     station_id: '',
+    department_id: '',
+    department: '',
 
     areaList: '', // 获取辖区列表
     area_index: '', // 下标
     area: '', // 辖区回显
+
     showCamera: false,
     cameraConfig: {
       flash: 'off',
@@ -58,6 +61,13 @@ Page({
     this.getAreaList();
   },
   onShow() {
+    const pages = getCurrentPages()
+    const currPage = pages[pages.length - 1] // 当前页
+    console.log(currPage.data) // data中会含有testdata
+    this.setData({
+      department_id: currPage.data.department_id,
+      department: currPage.data.department,
+    })
     if (wx.getStorageSync('token')) {
       this.setData({
         area: app.globalData.userInfo.station.name,
@@ -69,6 +79,8 @@ Page({
         number: app.globalData.userInfo.number,
         face_image: app.globalData.userInfo.face_image,
         station_id: app.globalData.userInfo.station_id,
+        department_id:  this.data.isSave ? this.data.department_id : app.globalData.userInfo.department_id,
+        department: this.data.isSave ? this.data.department : app.globalData.userInfo.department.title,
         isLogin: false,
         numberDisabled: true,
         btnDisabled: true,
@@ -99,6 +111,16 @@ Page({
     });
   },
 
+  // 选择部门
+  toDepartment() {
+    wx.navigateTo({
+      url: '../register/department/department',
+    })
+    this.setData({
+      isSave: true
+    });
+  },
+
   nameInput(e) {
     this.data.name = e.detail.value;
   },
@@ -124,6 +146,9 @@ Page({
         icon: 'none',
         duration: 2000
       });
+      this.setData({
+        phone: ''
+      })
     }
   },
   phoneFocus() {
@@ -140,6 +165,9 @@ Page({
         icon: 'none',
         duration: 2000
       });
+      this.setData({
+        id_card: ''
+      })
     }
 
   },
@@ -162,8 +190,8 @@ Page({
     // 登录态为在线则是修改传id
     if (wx.getStorageSync('token')) {
       console.log('走修改');
-      if (self.data.name && self.data.phone && self.data.id_card && self.data.number && self.data.face_image && self.data.station_id) {
-        user.changeUser(wx.getStorageSync('token'), self.data.id, self.data.name, self.data.phone, self.data.face_image, self.data.id_card, self.data.number, self.data.station_id).then(res => {
+      if (self.data.name && self.data.phone && self.data.id_card && self.data.number && self.data.face_image && self.data.station_id && self.data.department_id) {
+        user.changeUser(wx.getStorageSync('token'), self.data.id, self.data.name, self.data.phone, self.data.face_image, self.data.id_card, self.data.number, self.data.station_id, self.data.department_id).then(res => {
           wx.showToast({
             title: '保存成功',
             icon: 'none',
@@ -186,15 +214,15 @@ Page({
       // 新增注册
       console.log('走注册');
       if (self.data.open_face == true) {
-        if (self.data.name && self.data.phone && self.data.id_card && self.data.number && self.data.face_image && self.data.station_id) {
-          user.register(self.data.id, self.data.name, self.data.password, self.data.phone, self.data.face_image, self.data.id_card, self.data.number, self.data.station_id).then(res => {
+        if (self.data.name && self.data.phone && self.data.id_card && self.data.number && self.data.face_image && self.data.station_id && self.data.department_id) {
+          user.register(self.data.id, self.data.name, self.data.password, self.data.phone, self.data.face_image, self.data.id_card, self.data.number, self.data.station_id, self.data.department_id).then(res => {
             self.setData({
               numberDisabled: true,
               btnDisabled: true,
               showPWD: false
             })
             wx.showToast({
-              title: '注册成功',
+              title: '注册成功,请通知管理员审核',
               icon: 'none',
               success: (res) => {
                 setTimeout(() => {

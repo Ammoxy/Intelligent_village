@@ -35,6 +35,11 @@ Page({
         preBtn: true
       })
     }
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 10000
+    })
     this.getDevice();
 
     // 获取完整的年月日 时分秒，以及默认显示的数组

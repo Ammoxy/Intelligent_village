@@ -1,0 +1,19 @@
+<!-- 对比照片 -->
+<view class="contrast">
+	<view class="contrast-box">
+		<view class="image-box">
+			<movable-area>
+				<movable-view direction="all" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="{{scale}}">
+					<image mode="widthFix" src="{{contrastDangerHref}}"></image>
+				</movable-view>
+			</movable-area>
+		</view>
+		<view class="image-box">
+			<movable-area>
+				<movable-view direction="all" bindchange="onChange1" bindscale="onScale1" scale scale-min="0.5" scale-max="4" scale-value="{{scale1}}">
+					<image mode="widthFix" src="{{contrastLogImage}}"></image>
+				</movable-view>
+			</movable-area>
+		</view>
+	</view>
+</view>

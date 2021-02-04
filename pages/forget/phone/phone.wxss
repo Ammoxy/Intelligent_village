@@ -1,0 +1,68 @@
+page {
+  background-color: #003366;
+  height: 100vh;
+}
+
+.title {
+  height: 10vh;
+  padding: 150rpx 0 150rpx 15rpx;
+  font-size: 50rpx;
+  color: #d6ecf0;
+}
+
+
+.forget {
+  height: 70vh;
+  padding: 70rpx 30rpx 0 30rpx;
+  border-radius: 70rpx 70rpx 0 0;
+  background-color: #fff;
+}
+
+.forget .item {
+  padding: 20rpx 50rpx;
+}
+
+.forget .item .input {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 50rpx;
+  border: 2rpx solid #003366;
+  text-align: center;
+}
+
+.forget .item .btn {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 50rpx;
+  border: 2rpx solid #003366;
+  background-color: #003366;
+  color: #fff;
+}
+
+.forget .handle {
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  color: #003366;
+  text-decoration: underline;
+}
+
+.forget .hr {
+  margin-top: 20rpx;
+  border: 1rpx solid #003366;
+}
+
+.forget .code{
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+ .forget .code .button {
+     height: 80rpx;
+     line-height: 80rpx;
+     border-radius: 20rpx;
+     border: 2rpx solid #003366;
+     background-color: #003366;
+     color: #fff;
+   }
+ 

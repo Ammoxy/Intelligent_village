@@ -1,5 +1,4 @@
-
-.details {
+.alert {
   width: 100vw;
   height: 100vh;
   overflow-y: auto;
@@ -8,13 +7,13 @@
 
 .table {
   position: relative;
-  border: 0px solid darkgray;
+  border: 0rpx solid darkgray;
 }
 
 .tr {
   display: flex;
   justify-content: center;
-  height: 10vh;
+  height: 8vh;
   align-items: center;
 }
 
@@ -24,18 +23,21 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: snow;
+  /* background: snow; */
+  background: #003366;
+  color: #ccc;
 }
 
+/*   
 .bg-g {
-  background: #378dbb;
-}
+  background: #003366;
+} */
 
 .bol {
   position: absolute;
   left: 0;
-  top: 10vh;
-  height: 90vh;
+  top: 8vh;
+  height: 82vh;
   overflow-x: auto;
 }
 
@@ -43,13 +45,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  padding-left: 10rpx;
+  height: 8vh;
+  /* padding-left: 10rpx; */
 
   white-space: nowrap;
-  border: 2rpx solid #ccc;
+  border: 1rpx solid #ccc;
   /*文本不换行*/
-  font-size: 36rpx;
+  font-size: 28rpx;
 
 }
 
@@ -57,17 +59,133 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  padding-left: 10rpx;
-  border: 2rpx solid #ccc;
-  color: #fff;
+  height: 8vh;
+  /* padding-left: 10rpx; */
+  border: 1rpx solid #ccc;
+  /* color: #fff; */
   /* white-space: nowrap; */
   /*文本不换行*/
-  font-size: 36rpx;
+  font-size: 26rpx;
+}
 
+.td .btn {
+  width: 15vw;
+  height: 5vh;
+  line-height: 5vh;
+  font-size: 26rpx;
+  background-color: #003366;
+  color: #fff;
 }
 
 .td image {
   width: 100rpx;
   height: 100rpx;
+}
+
+
+/* 遮罩 */
+.mark {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.mark .content {
+  position: relative;
+  height: 90vh;
+  margin: 50rpx;
+  padding: 0 50rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+
+.mark .content .close {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+
+
+.mark .content .close image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.mark .content .detail {
+  position: absolute;
+  top: 60rpx;
+  /* margin: 50rpx; */
+}
+
+.mark .content .detail .column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70vw;
+  margin: 20rpx 0;
+  font-size: 26rpx;
+}
+
+.mark .content .detail .column text {
+  width: 200rpx;
+}
+
+.mark .content .detail .column image {
+  width: 30vw;
+  height: 20vh;
+}
+
+/* 处理 */
+.mark .content .form {
+  position: absolute;
+  top: 10vh;
+  width: 70vw;
+}
+
+.mark .content .form textarea {
+  width: 70vw;
+  padding: 10rpx;
+  border: 2rpx #ccc solid;
+  border-radius: 10rpx;
+}
+
+.mark .content .form button {
+  width: 73vw;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+
+  font-size: 26rpx;
+  background-color: #003366;
+  color: #fff;
+}
+
+/* 分页 */
+.paging {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95vw;
+  margin: 30rpx 5rpx;
+  font-size: 36rpx;
+}
+
+.paging .page-item {
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 2rpx solid #003366;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.paging .input {
+  width: 150rpx;
+  padding-left: 10rpx;
 }

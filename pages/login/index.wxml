@@ -1,20 +1,71 @@
-<view class="logo">
-    <text>图巴诺智能乡村</text>
+<view class="title">
+	<view style="font-size:60rpx;">Welcome</view>
+	<view>图巴诺智能乡村</view>
 </view>
 
 <view class="login">
-  <form bindsubmit='login'>
-    <view class="item">
-      <input name="username" class="input fs" placeholder="请输入工号" value="{{ username }}"/>
-    </view>
-    <view class="item">
-      <input name="password" class="input fs" placeholder="请输入密码" type="password"  value="{{ password }}"/>
-    </view>
-    <view class="item">
-      <button class="btn fs" form-type='submit'>登录</button>
-    </view>
-  </form>
-    <view class="href">
-        <view bindtap="toRegister">无账号，去注册</view>
-    </view>
+	<view class="{{curLogin == 1 ? 'show' : 'hidden'}}">
+		<form bindsubmit='login'>
+			<view class="item">
+				<input name="username" class="input fs" placeholder="请输入手机号" value="{{ username }}" />
+			</view>
+			<view class="item">
+				<input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" />
+			</view>
+			<view class="handle" bindtap="toForget">忘记密码?</view>
+			<view class="item">
+				<button class="btn fs" form-type='submit'>登录</button>
+			</view>
+			<view class="handle" bindtap="toRegister">无账号，去注册</view>
+		</form>
+		<!-- <view class="hr"></view>
+		<view class="handle {{curLogin == 2 ? 'active' : ''}}" data-curlogin="2" bindtap="loginType">验证码登录</view> -->
+	</view>
+	<!-- <view class="{{curLogin == 2 ? 'show' : 'hidden'}}">
+		<form bindsubmit='codeLogin'>
+			<form bindsubmit='bindCode'>
+				<view class="item">
+					<input name="phone" class="input fs" placeholder="请输入已注册的手机号" value="{{ phone }}" />
+				</view>
+				<view class="item code">
+					<input style="width: 350rpx" class="input fs" name="code" value="{{ code }}" placeholder="请填写验证码" />
+					<button class="button fs" disabled="{{ disBtn }}" form-type='submit'>
+						<text>{{ codeTxt }}</text>
+					</button>
+				</view>
+			</form>
+			<view class="item">
+				<button class="btn fs" form-type='submit'>登录</button>
+			</view>
+		</form>
+		<view class="hr"></view>
+		<view class="handle {{curLogin == 1 ? 'active' : ''}}" data-curlogin="1" bindtap="loginType">账号登录</view>
+	</view> -->
+
 </view>
+
+
+<!-- <view class="logo">
+</view>
+
+<view class="type">
+</view>
+
+	<form bindsubmit='login'>
+		<view class="item">
+			<input name="username" class="input fs" placeholder="请输入手机号" value="{{ username }}" />
+		</view>
+		<view class="item">
+			<input name="password" class="input fs" placeholder="请输入密码" type="password" value="{{ password }}" />
+		</view>
+		<view class="item">
+			<button class="btn fs" form-type='submit'>登录</button>
+		</view>
+	</form>
+
+
+
+<view class="href {{curLogin == 1 ? 'show' : 'hidden'}}">
+	<view bindtap="toForget">忘记密码?</view>
+	<view bindtap="toRegister">无账号，去注册</view>
+</view> -->

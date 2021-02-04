@@ -12,6 +12,7 @@
 				<view class="user_nickname">姓名：{{userInfo.name}}</view>
 				<view class="user_nickname">工号: {{userInfo.number}}</view>
 				<view class="user_nickname">辖区：{{userInfo.station.name}}</view>
+				<view class="user_nickname">部门：{{userInfo.department.title}}</view>
 			</view>
 		</view>
 		<view class="user" wx:else>
@@ -20,52 +21,64 @@
 		</view>
 	</view>
 
-	<view class="plate">
-		<view class="title">信息板块</view>
-		<view class="list">
-			<view bindtap="toInfomation">
-				<image src="/icon/information.png" />
+	<view class="personal">
+		<view class="item" bindtap="toInfomation">
+			<view class="title">
+				<image src="/icons/police.png"></image>
 				<text>警员信息</text>
 			</view>
-			<view bindtap="toDubious">
-				<image src="/icon/suspicious_face.png" />
-				<text>可疑人脸</text>
+			<view class="right-icon">
+				<image src="/icons/right-icon.png"></image>
 			</view>
-			<view bindtap="changeUser">
-				<image src="/icon/close.png" />
+		</view>
+		<!-- <view class="item" bindtap="toInfomation">
+			<view class="title">
+				<image src="/icons/open.png"></image>
+				<text>一键开门</text>
+			</view>
+			<view class="right-icon">
+				<image src="/icons/right-icon.png"></image>
+			</view>
+		</view> -->
+		<view class="item" bindtap="changeUser">
+			<view class="title">
+				<image src="/icons/exit.png"></image>
 				<text>切换账号</text>
 			</view>
+			<view class="right-icon">
+				<image src="/icons/right-icon.png"></image>
+			</view>
 		</view>
 	</view>
-
-	<view class="plate">
-		<view class="title">设备</view>
-		<view class="list">
-			<!-- <picker bindchange="accessChange" value="{{index}}" range-key="name" range="{{areaList}}"> -->
-			<view bindtap="toDevice">
-				<image src="/icon/rke.png" />
+	<view class="personal">
+		<view class="item" bindtap="toDubious">
+			<view class="title">
+				<image src="/icons/catch.png"></image>
+				<text>可疑人脸</text>
+			</view>
+			<view class="right-icon">
+				<image src="/icons/right-icon.png"></image>
+			</view>
+		</view>
+		<view class="item" bindtap="toDevice">
+			<view class="title">
+				<image src="/icons/device.png"></image>
 				<text>设备信息</text>
 			</view>
-			<!-- </picker> -->
+			<view class="right-icon">
+				<image src="/icons/right-icon.png"></image>
+			</view>
 		</view>
-	</view>
-	<view class="plate">
-		<view class="title">地址信息</view>
-		<view class="list">
-			<!-- <picker bindchange="rentChange" value="{{index}}" range-key="name" range="{{areaList}}"> -->
-				<view bindtap="toRent">
-					<image src="/icon/unit.png" />
-					<text>出租屋</text>
-				</view>
-			<!-- </picker> -->
-			<!-- <picker bindchange="schoolChange" value="{{index}}" range-key="name" range="{{areaList}}"> -->
-				<!-- <view bindtap="toSchool">
-					<image src="/icon/school.png" />
-					<text>学校</text>
-				</view> -->
-			<!-- </picker> -->
+		<view class="item" bindtap="toRent">
+			<view class="title">
+				<image src="/icons/rent.png"></image>
+				<text>出租屋</text>
+			</view>
+			<view class="right-icon">
+				<image src="/icons/right-icon.png"></image>
+			</view>
 		</view>
 	</view>
 </view>
 
-<view class="supportText">智能乡村提供技术支持v1.0.4</view>
+<view class="supportText">智能乡村提供技术支持v1.0.14</view>

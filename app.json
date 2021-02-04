@@ -1,9 +1,50 @@
 {
   "pages": [
-
     "pages/personal/index/index",
+    "pages/forget/phone/phone",
+
+   
 
     "pages/register/index",
+
+    "pages/alert/index/index",
+
+
+    "pages/login/index",
+
+
+
+
+
+
+    "pages/alert/contrast/contrast",
+
+    "pages/open/door/door/index",
+
+
+    "pages/personal/dubious/dubious-capture/dubious-capture",
+
+
+
+
+
+    "pages/home/home",
+
+
+
+    "pages/register/department/department",
+
+
+
+
+
+    "pages/forget/password/password",
+
+
+
+
+
+
     "pages/personal/school/school/school",
     "pages/personal/school/school-info/school-info",
     "pages/personal/school/school-teacher/school-teacher",
@@ -16,8 +57,6 @@
     "pages/personal/rent/renter-inout/renter-inout",
     "pages/personal/rent/renter-info/renter-info",
     "pages/personal/rent/renter/renter",
-    "pages/login/index",
-    "pages/home/home",
     "pages/personal/access/access/access",
     "pages/personal/access/access-device/access-device",
     "pages/personal/access/access-device-info/access-device-info",
@@ -25,12 +64,29 @@
 
     "pages/personal/access/access-device-capture/access-device-capture",
     "pages/personal/dubious/dubious/dubious",
-    "pages/personal/dubious/dubious-info/dubious-info",
-    "pages/personal/dubious/dubious-capture/dubious-capture"
+    "pages/personal/dubious/dubious-info/dubious-info"
   ],
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#003366",
+    "list": [
+      {
+        "pagePath": "pages/alert/index/index",
+        "text": "告警",
+        "iconPath": "/icons/alert2.png",
+        "selectedIconPath": "/icons/alert1.png"
+      },
+      {
+        "pagePath": "pages/personal/index/index",
+        "text": "我的",
+        "iconPath": "/icons/my2.png",
+        "selectedIconPath": "/icons/my1.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#378dbb",
+    "navigationBarBackgroundColor": "#003366",
     "navigationBarTitleText": "智能乡村",
     "navigationBarTextStyle": "white"
   },
