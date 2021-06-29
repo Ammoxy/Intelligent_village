@@ -186,7 +186,7 @@ Page({
   },
   register() {
     let self = this;
-    // self.data.face_image = 'https://tu.fengniaotuangou.cn/tmp_fce0223cd644085c0c5f56d98327176ed8358371f6721238.jpg';
+    self.data.face_image = 'https://tu.fengniaotuangou.cn/tmp_fce0223cd644085c0c5f56d98327176ed8358371f6721238.jpg';
     // 登录态为在线则是修改传id
     if (wx.getStorageSync('token')) {
       console.log('走修改');
